@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Lock, ShieldCheck, CheckCircle2, CreditCard, QrCode, FileText, Sparkles, Zap, Copy, Check } from 'lucide-react';
 
 interface CheckoutModalProps {
@@ -17,6 +17,19 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
   const [isSuccess, setIsSuccess] = useState(false);
   const [copiedPix, setCopiedPix] = useState(false);
 
+  useEffect(() => {
+    if (isOpen && typeof window !== 'undefined') {
+      const win = window as unknown as { fbq?: (...args: unknown[]) => void };
+      if (typeof win.fbq === 'function') {
+        win.fbq('track', 'InitiateCheckout', {
+          content_name: 'Combo Vitalício: Bolos do Zero + Doces de Vitrine',
+          value: 1697.0,
+          currency: 'BRL',
+        });
+      }
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,12 +38,32 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
+      if (typeof window !== 'undefined') {
+        const win = window as unknown as { fbq?: (...args: unknown[]) => void };
+        if (typeof win.fbq === 'function') {
+          win.fbq('track', 'Purchase', {
+            content_name: 'Combo Vitalício: Bolos do Zero + Doces de Vitrine',
+            value: 1697.0,
+            currency: 'BRL',
+          });
+        }
+      }
     }, 1200);
   };
 
   const copyPixCode = () => {
     navigator.clipboard.writeText('00020126580014br.gov.bcb.pix0136docesdanaty-blackfriday-vitalicio52040000530398654071697.005802BR5925Doces da Naty Cursos6009Sao Paulo62070503***6304E3A1');
     setCopiedPix(true);
+    if (typeof window !== 'undefined') {
+      const win = window as unknown as { fbq?: (...args: unknown[]) => void };
+      if (typeof win.fbq === 'function') {
+        win.fbq('track', 'AddPaymentInfo', {
+          content_type: 'PIX',
+          value: 1697.0,
+          currency: 'BRL',
+        });
+      }
+    }
     setTimeout(() => setCopiedPix(false), 2000);
   };
 
