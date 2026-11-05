@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Dream Orphans";
+  src: url("https://db.onlinewebfonts.com/t/b0c898b2d56a1c7fb643ecdcb84bfb25.eot");
+  src: url("https://db.onlinewebfonts.com/t/b0c898b2d56a1c7fb643ecdcb84bfb25.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/b0c898b2d56a1c7fb643ecdcb84bfb25.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/b0c898b2d56a1c7fb643ecdcb84bfb25.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/b0c898b2d56a1c7fb643ecdcb84bfb25.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-dream-orphans {
+  font-family: 'Dream Orphans', 'Dream Orphans V1', 'Outfit', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: #27272a;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes pink-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4), 0 0 35px rgba(236, 72, 153, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.8), 0 0 60px rgba(236, 72, 153, 0.4);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+.animate-pink-pulse {
+  animation: pink-pulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-subtle-float {
+  animation: subtle-float 5s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
