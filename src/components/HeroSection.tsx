@@ -64,20 +64,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:pl-4 xl:pl-6 lg:pr-8 mt-2 sm:mt-4 lg:mt-0 py-4 sm:py-6 md:py-8 lg:py-12 xl:py-14">
           <div className="max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl flex flex-col items-start text-left lg:-translate-x-3 xl:-translate-x-6">
             
-            {/* Badge: OFERTA EXCLUSIVA DE BLACK FRIDAY (Aumentado) */}
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-gradient-to-r from-pink-500/20 via-rose-500/25 to-pink-500/20 border border-pink-500/40 text-pink-400 text-sm sm:text-base md:text-lg font-black uppercase tracking-widest shadow-md shadow-pink-500/10 mb-3 animate-pulse">
+            {/* Badge: OFERTA EXCLUSIVA DE BLACK FRIDAY */}
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 lg:px-4.5 lg:py-1.5 rounded-full bg-gradient-to-r from-pink-500/20 via-rose-500/25 to-pink-500/20 border border-pink-500/40 text-pink-400 text-sm sm:text-base md:text-lg lg:text-base font-black uppercase tracking-widest shadow-md shadow-pink-500/10 mb-3 animate-pulse">
               <Flame className="w-5 h-5 text-pink-500 fill-pink-500" />
               <span>OFERTA EXCLUSIVA DE BLACK FRIDAY</span>
               <Sparkles className="w-4 h-4 text-pink-300" />
             </div>
 
-            {/* Headline Lateralizada à Esquerda (Aumentada adicionalmente) */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[4.85rem] 2xl:text-[5.2rem] font-black text-white tracking-wide leading-[1.03] font-dream-orphans [text-wrap:balance]">
+            {/* Headline Lateralizada à Esquerda (Reduzida 10% no desktop) */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.35rem] 2xl:text-[4.7rem] font-black text-white tracking-wide leading-[1.03] font-dream-orphans [text-wrap:balance]">
               Conquiste sua <span className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent">independência financeira</span> através da confeitaria descomplicada
             </h1>
 
-            {/* Subheadline Detalhada (Aumentada adicionalmente) */}
-            <p className="mt-3.5 text-base sm:text-lg md:text-xl lg:text-[1.4rem] xl:text-[1.45rem] text-zinc-200 font-medium leading-relaxed max-w-2xl xl:max-w-3xl 2xl:max-w-4xl [text-wrap:balance]">
+            {/* Subheadline Detalhada (Reduzida 10% no desktop) */}
+            <p className="mt-3.5 text-base sm:text-lg md:text-xl lg:text-[1.25rem] xl:text-[1.3rem] text-zinc-200 font-medium leading-relaxed max-w-2xl xl:max-w-3xl 2xl:max-w-4xl [text-wrap:balance]">
               Acesso <strong className="text-white font-bold">VITALÍCIO</strong> aos 2 cursos mais completos e lucrativos da Doces da Naty: domine massas e recheios infalíveis no <span className="text-pink-400 font-semibold">Bolos do Zero</span> e monte um delivery de vendas diárias com o <span className="text-pink-400 font-semibold">Doces de Vitrine</span> — tudo pelo preço de um único curso.
             </p>
 
@@ -85,7 +85,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             <div className="mt-5 flex flex-col items-start w-full max-w-lg">
               <button
                 onClick={onOpenCheckout}
-                className="w-full py-5 px-7 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-lg sm:text-xl md:text-2xl uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-3"
+                className="w-full py-5 px-7 lg:py-4.5 lg:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-[1.35rem] uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-3"
               >
                 <Sparkles className="w-5 h-5 text-amber-200" />
                 <span>QUERO GARANTIR MEU COMBO VITALÍCIO</span>
@@ -97,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             </div>
 
             {/* Micro Trust Badges Alinhados à Esquerda */}
-            <div className="mt-5 pt-4 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-start gap-4 sm:gap-6 text-zinc-300 text-base sm:text-lg">
+            <div className="mt-5 pt-4 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-start gap-4 sm:gap-6 text-zinc-300 text-base sm:text-lg lg:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
                 <span>Acesso imediato às aulas</span>
