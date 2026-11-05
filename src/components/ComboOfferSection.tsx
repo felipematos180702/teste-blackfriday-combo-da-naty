@@ -2,6 +2,7 @@ import React from 'react';
 import { COMBO_DELIVERABLES } from '../data/landingData';
 import { Check, ShieldCheck, Flame, Lock, Zap, ArrowRight, Star } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
+import comboMockupImg from '../assets/images/combo_mockup_cover_1793889843146.jpg';
 
 interface ComboOfferSectionProps {
   onOpenCheckout: () => void;
@@ -46,9 +47,8 @@ export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenChec
             <div className="lg:col-span-5 flex flex-col items-center">
               <div className="relative w-full max-w-[360px] aspect-square rounded-2xl overflow-hidden bg-zinc-950 border border-pink-500/40 shadow-2xl group">
                 <img
-                  src="/src/assets/images/combo_mockup_cover_1793889843146.jpg"
+                  src={comboMockupImg}
                   alt="Mockup do Combo Vitalício Bolos do Zero + Doces de Vitrine"
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />

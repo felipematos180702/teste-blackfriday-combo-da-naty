@@ -3,6 +3,10 @@
  * Doces da Naty - Black Friday
  */
 
+import docesVitrineImg from '../assets/images/doces_vitrine_course_1793889841451.jpg';
+import bolosZeroImg from '../assets/images/bolos_do_zero_course_1793889842604.jpg';
+import nataschaBioImg from '../assets/images/natascha_confeiteira_bio_1793889844819.jpg';
+
 export interface TestimonialItem {
   id: string;
   name: string;
@@ -30,7 +34,7 @@ export const COURSE_DOCES_DE_VITRINE = {
   id: "doces-de-vitrine",
   title: "Curso 1: Doces de Vitrine",
   subtitle: "A estrutura completa para transformar sua vitrine em um ímã de vendas diárias",
-  image: "/src/assets/images/doces_vitrine_course_1793889841451.jpg",
+  image: docesVitrineImg,
   quote: "Muitas confeiteiras têm o sonho de viver da confeitaria, mas começam da forma errada, o sucesso vai muito além das receitas.",
   description: "No Doces de vitrine você entende que para crescer na confeitaria é preciso saber os pilares mais importantes, e não estamos falando apenas dos doces, é preciso aprender sobre vendas, divulgação, precificação, delivery e gestão financeira.",
   highlight: "É o passo a passo que usei para construir a Doces da Naty do zero, e que você terá acesso para aplicar na sua confeitaria.",
@@ -47,7 +51,7 @@ export const COURSE_BOLOS_DO_ZERO = {
   id: "bolos-do-zero",
   title: "Curso 2: Bolos do Zero",
   subtitle: "O método definitivo para nunca mais perder uma massa, recheio ou cliente",
-  image: "/src/assets/images/bolos_do_zero_course_1793889842604.jpg",
+  image: bolosZeroImg,
   quote: "Bolo foi o meu maior vilão na confeitaria, e de tanto errar por não saber fazer os processos, eu criei o bolos do zero com o passo a passo para fazer seu bolo ficar perfeito.",
   description: "Para fazer bolos com segurança você precisa da massa certa, o recheio no ponto, a montagem padronizada, a decoração impecável e o sabor irresistível.",
   highlight: "Além disso, eu te ensino como vender bolos diariamente através das fatias, que são o ponta pé para o cliente conhecer o sabor do seu bolo, é o que eu chamo de degustação paga.",
@@ -118,7 +122,7 @@ export const COMPARISON_DATA = [
 
 export const FOUNDER_INFO = {
   title: "Prazer, eu sou a Natascha, fundadora da Doces da Naty e confeiteira.",
-  image: "/src/assets/images/natascha_confeiteira_bio_1793889844819.jpg",
+  image: nataschaBioImg,
   bioParagraphs: [
     "Em 2017, decidi dar um passo corajoso: deixei 9 anos de estabilidade como supervisora de cobrança no regime CLT para mergulhar em um mundo onde eu não tinha nenhuma experiência, mas sobrava determinação. Comecei do zero, na cozinha do meu apartamento, e foi ali, entre erros e acertos, que conquistei meus primeiros clientes.",
     "Foram 3 anos trabalhando em casa até dar o próximo grande passo: em 2021, abri as portas da loja física da Doces da Naty. Hoje, com a loja aberta e funcionando todos os dias com delivery e balcão, transformei essa vivência real de confeitaria em método prático de ensino.",

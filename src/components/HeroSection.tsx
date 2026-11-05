@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Play, Volume2, VolumeX, ShieldCheck, CheckCircle2, Sparkles, Flame, Clock } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
+import nataschaHeroImg from '../assets/images/natascha_hero.jpg';
+import vslThumbnail from '../assets/images/hero_vsl_thumbnail_1793889840681.jpg';
 
 interface HeroSectionProps {
   onOpenCheckout: () => void;
@@ -19,10 +21,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
         {/* Versão Mobile: Foto da produtora no topo da seção com maior destaque e camada overlay na base */}
         <div className="lg:hidden relative w-full h-[480px] sm:h-[560px] overflow-hidden bg-zinc-950">
           <img
-            src="https://lh3.googleusercontent.com/d/1nt0xdBpvYZ9NBgV1ZiTH3dMnfhZ8M4xb"
+            src={nataschaHeroImg}
             alt="Natascha - Doces da Naty"
-            referrerPolicy="no-referrer"
+            loading="eager"
+            decoding="sync"
             className="w-full h-full object-cover object-top"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = '/images/natascha_hero.jpg';
+            }}
           />
           {/* Camada overlay na parte de baixo da foto */}
           <div className="absolute inset-x-0 bottom-0 h-40 sm:h-48 bg-gradient-to-t from-[#09090b] via-[#09090b]/85 to-transparent pointer-events-none" />
@@ -32,10 +38,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
         {/* Versão Desktop: Background Image no lado direito com transição na borda esquerda */}
         <div className="hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[680px] xl:w-[780px] 2xl:w-[860px] pointer-events-none z-0 items-end justify-end overflow-hidden">
           <img
-            src="https://lh3.googleusercontent.com/d/1nt0xdBpvYZ9NBgV1ZiTH3dMnfhZ8M4xb"
+            src={nataschaHeroImg}
             alt="Natascha - Doces da Naty"
-            referrerPolicy="no-referrer"
             className="h-full w-full max-h-full object-contain object-bottom opacity-95 scale-[1.32] xl:scale-[1.35] origin-bottom translate-y-12 xl:translate-y-25 transition-all duration-700"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = '/images/natascha_hero.jpg';
+            }}
           />
 
           {/* Gradient Overlay na borda esquerda (transição suave para os textos da lateral esquerda) */}
@@ -123,10 +131,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             
             {/* VSL Media Image / Video Simulation */}
             <img
-              src="/src/assets/images/hero_vsl_thumbnail_1793889840681.jpg"
+              src={vslThumbnail}
               alt="Apresentação do Combo Vitalício Doces da Naty"
-              referrerPolicy="no-referrer"
               className={`w-full h-full object-cover transition-transform duration-700 ${isPlaying ? 'scale-105 filter brightness-90' : 'group-hover:scale-105'}`}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = '/images/hero_vsl_thumbnail_1793889840681.jpg';
+              }}
             />
 
             {/* Gradient Overlays */}
