@@ -35,26 +35,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
           <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#09090b]/40 to-transparent pointer-events-none" />
         </div>
 
-        {/* Versão Desktop: Background Image no lado direito com transição na borda esquerda */}
-        <div className="hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[680px] xl:w-[780px] 2xl:w-[860px] pointer-events-none z-0 items-end justify-end overflow-hidden">
+        {/* Versão Desktop: Background Image no lado direito encostada na lateral direita */}
+        <div className="hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[720px] xl:w-[840px] 2xl:w-[940px] pointer-events-none z-0 items-end justify-end overflow-hidden">
           <img
             src={nataschaHeroImg}
             alt="Natascha - Doces da Naty"
-            className="h-full w-full max-h-full object-contain object-bottom opacity-95 scale-[1.32] xl:scale-[1.35] origin-bottom translate-y-12 xl:translate-y-25 transition-all duration-700"
+            className="h-full w-full max-h-full object-contain object-[right_bottom] opacity-95 scale-[1.32] xl:scale-[1.35] origin-bottom-right translate-y-12 xl:translate-y-25 transition-all duration-700 [mask-image:linear-gradient(to_right,transparent_0%,transparent_12%,black_38%,black_100%)] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,transparent_12%,black_38%,black_100%)]"
             onError={(e) => {
               (e.currentTarget as HTMLImageElement).src = '/images/natascha_hero.jpg';
             }}
           />
 
-          {/* Gradient Overlay na borda esquerda (transição suave para os textos da lateral esquerda) */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#09090b] via-[#09090b]/85 lg:via-[#09090b]/50 to-transparent pointer-events-none z-10" />
+          {/* Gradient Overlay na borda esquerda: sólido #09090b e transição profunda para fusão perfeita em tela cheia */}
+          <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-[#09090b] via-[#09090b] via-20% lg:via-28% xl:via-35% to-transparent pointer-events-none z-10" />
           
           {/* Camada vertical adicional de reforço na transição da borda esquerda */}
-          <div className="absolute left-0 top-0 bottom-0 w-64 bg-gradient-to-r from-[#09090b] via-[#09090b]/75 to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-[#09090b] via-[#09090b]/90 to-transparent pointer-events-none z-10" />
 
           {/* Fades de fusão suave no topo e na base */}
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent pointer-events-none z-10" />
-          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#09090b] via-[#09090b]/40 to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#09090b] via-[#09090b]/50 to-transparent pointer-events-none z-10" />
 
           {/* Ambient pink accent glow behind image */}
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/20 blur-[140px] rounded-full pointer-events-none" />
