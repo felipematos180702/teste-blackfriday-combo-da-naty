@@ -59,28 +59,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
           <div className="hero-desktop-layer absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/20 blur-[140px] rounded-full pointer-events-none" />
         </div>
 
-        {/* Hero Content: No mobile os textos começam mais para baixo para dar destaque à foto, no desktop fica lateralizado */}
+        {/* Hero Content: No mobile os textos são centralizados para dar destaque, no desktop fica lateralizado à esquerda */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:pl-4 xl:pl-6 lg:pr-8 mt-2 sm:mt-4 lg:mt-0 py-4 sm:py-6 md:py-8 lg:py-12 xl:py-14">
-          <div className="max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl flex flex-col items-start text-left lg:-translate-x-3 xl:-translate-x-6">
+          <div className="max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0 lg:-translate-x-3 xl:-translate-x-6">
             
-            {/* Badge: OFERTA EXCLUSIVA DE BLACK FRIDAY */}
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 lg:px-4.5 lg:py-1.5 rounded-full bg-gradient-to-r from-pink-500/20 via-rose-500/25 to-pink-500/20 border border-pink-500/40 text-pink-400 text-sm sm:text-base md:text-lg lg:text-base font-black uppercase tracking-widest shadow-md shadow-pink-500/10 mb-4 sm:mb-5 lg:mb-6 animate-pulse">
-              <Flame className="w-5 h-5 text-pink-500 fill-pink-500" />
+            {/* Badge: OFERTA EXCLUSIVA DE BLACK FRIDAY (Sem caixa no mobile, fogo ao final e em linha única) */}
+            <div className="inline-flex items-center gap-1.5 sm:gap-2.5 p-0 bg-transparent border-none shadow-none rounded-none lg:px-4.5 lg:py-1.5 lg:rounded-full lg:bg-gradient-to-r lg:from-pink-500/20 lg:via-rose-500/25 lg:to-pink-500/20 lg:border lg:border-pink-500/40 lg:shadow-md lg:shadow-pink-500/10 text-pink-400 text-[10px] min-[360px]:text-xs min-[400px]:text-sm sm:text-base md:text-lg lg:text-base font-black uppercase tracking-wider lg:tracking-widest mb-3 sm:mb-5 lg:mb-6 animate-pulse whitespace-nowrap">
               <span>OFERTA EXCLUSIVA DE BLACK FRIDAY</span>
+              <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-pink-500 fill-pink-500 shrink-0" />
             </div>
 
-            {/* Headline Lateralizada à Esquerda (Reduzida 10% no desktop) */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.35rem] 2xl:text-[4.7rem] font-black text-white tracking-wide leading-[1.03] font-dream-orphans [text-wrap:balance]">
+            {/* Headline Centralizada no Mobile / Lateralizada à Esquerda no Desktop (Aumentada no mobile para 3 linhas) */}
+            <h1 className="text-[2.45rem] min-[380px]:text-[2.7rem] sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.35rem] 2xl:text-[4.7rem] font-black text-white tracking-tight sm:tracking-wide leading-[1.04] font-dream-orphans [text-wrap:balance] text-center lg:text-left px-0">
               Conquiste sua <span className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent">independência financeira</span> através da confeitaria descomplicada
             </h1>
 
-            {/* Subheadline Detalhada (Espaçamento vertical ampliado) */}
-            <p className="mt-4 sm:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-[1.25rem] xl:text-[1.3rem] text-zinc-200 font-medium leading-relaxed max-w-2xl xl:max-w-3xl 2xl:max-w-4xl [text-wrap:balance]">
+            {/* Subheadline Centralizada no Mobile / Lateralizada à Esquerda no Desktop */}
+            <p className="mt-4 sm:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-[1.25rem] xl:text-[1.3rem] text-zinc-200 font-medium leading-relaxed max-w-2xl xl:max-w-3xl 2xl:max-w-4xl [text-wrap:balance] text-center lg:text-left">
               Acesso <strong className="text-white font-bold">VITALÍCIO</strong> aos 2 cursos mais completos e lucrativos da Doces da Naty: domine massas e recheios infalíveis no <span className="text-pink-400 font-semibold">Bolos do Zero</span> e monte um delivery de vendas diárias com o <span className="text-pink-400 font-semibold">Doces de Vitrine</span> — tudo pelo preço de um único curso.
             </p>
 
-            {/* Botão CTA Destacado em Rosa Pink com Animação de Pulso Lateralizado */}
-            <div className="mt-6 sm:mt-7 lg:mt-8 flex flex-col items-start w-full max-w-lg">
+            {/* Botão CTA Centralizado no Mobile / Lateralizado no Desktop */}
+            <div className="mt-6 sm:mt-7 lg:mt-8 flex flex-col items-center lg:items-start w-full max-w-lg">
               <button
                 onClick={onOpenCheckout}
                 className="w-full py-5 px-7 lg:py-4.5 lg:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-[1.35rem] uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-3"
@@ -88,13 +88,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
                 <span>QUERO GARANTIR MEU COMBO VITALÍCIO</span>
               </button>
               
-              <p className="mt-2 text-xs sm:text-sm text-zinc-400 text-left">
+              <p className="mt-2 text-xs sm:text-sm text-zinc-400 text-center lg:text-left">
                 Acesso vitalício sem renovação • Garantia de 7 dias • Vagas limitadas
               </p>
             </div>
 
-            {/* Micro Trust Badges Alinhados à Esquerda */}
-            <div className="mt-6 sm:mt-7 lg:mt-8 pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-start gap-4 sm:gap-6 text-zinc-300 text-base sm:text-lg lg:text-base">
+            {/* Micro Trust Badges Centralizados no Mobile */}
+            <div className="mt-6 sm:mt-7 lg:mt-8 pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-zinc-300 text-base sm:text-lg lg:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
                 <span>Acesso imediato às aulas</span>
