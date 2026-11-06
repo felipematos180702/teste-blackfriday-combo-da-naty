@@ -124,3 +124,22 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #ec4899;
 }
+
+/* Isolamento estrito de camadas do Hero para evitar vazamento de overlays entre mobile e desktop */
+@media (max-width: 1023px) {
+  .hero-desktop-layer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-mobile-layer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}

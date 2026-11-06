@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
       <div className="relative min-h-[70vh] lg:min-h-[88vh] xl:min-h-[92vh] flex flex-col lg:flex-row lg:items-center">
         
         {/* Versão Mobile: Foto da produtora no topo da seção com maior destaque e camada overlay na base */}
-        <div className="lg:hidden relative w-full h-[480px] sm:h-[560px] overflow-hidden bg-zinc-950">
+        <div className="hero-mobile-layer lg:hidden relative z-20 w-full h-[480px] sm:h-[560px] overflow-hidden bg-zinc-950">
           <img
             src={nataschaHeroImg}
             alt="Natascha - Doces da Naty"
@@ -35,7 +35,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
         </div>
 
         {/* Versão Desktop: Background Image no lado direito encostada na lateral direita */}
-        <div className="hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[720px] xl:w-[840px] 2xl:w-[940px] pointer-events-none z-0 items-end justify-end overflow-hidden">
+        <div className="hero-desktop-layer hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[720px] xl:w-[840px] 2xl:w-[940px] pointer-events-none z-0 items-end justify-end overflow-hidden">
           <img
             src={nataschaHeroImg}
             alt="Natascha - Doces da Naty"
@@ -46,17 +46,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
           />
 
           {/* Gradient Overlay na borda esquerda: sólido #09090b e transição profunda para fusão perfeita em tela cheia */}
-          <div className="absolute inset-y-0 -left-40 w-[115%] bg-gradient-to-r from-[#09090b] via-[#09090b] via-20% lg:via-28% xl:via-35% to-transparent pointer-events-none z-10" />
+          <div className="hero-desktop-layer absolute inset-y-0 -left-40 w-[115%] bg-gradient-to-r from-[#09090b] via-[#09090b] via-20% lg:via-28% xl:via-35% to-transparent pointer-events-none z-10" />
           
           {/* Camada vertical adicional de reforço na transição da borda esquerda */}
-          <div className="absolute inset-y-0 -left-40 w-2/3 bg-gradient-to-r from-[#09090b] via-[#09090b]/90 to-transparent pointer-events-none z-10" />
+          <div className="hero-desktop-layer absolute inset-y-0 -left-40 w-2/3 bg-gradient-to-r from-[#09090b] via-[#09090b]/90 to-transparent pointer-events-none z-10" />
 
           {/* Fades de fusão suave no topo e na base */}
-          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent pointer-events-none z-10" />
-          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#09090b] via-[#09090b]/50 to-transparent pointer-events-none z-10" />
+          <div className="hero-desktop-layer absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent pointer-events-none z-10" />
+          <div className="hero-desktop-layer absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#09090b] via-[#09090b]/50 to-transparent pointer-events-none z-10" />
 
           {/* Ambient pink accent glow behind image */}
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/20 blur-[140px] rounded-full pointer-events-none" />
+          <div className="hero-desktop-layer absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600/20 blur-[140px] rounded-full pointer-events-none" />
         </div>
 
         {/* Hero Content: No mobile os textos começam mais para baixo para dar destaque à foto, no desktop fica lateralizado */}
@@ -139,8 +139,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             {/* Gradient Overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40 pointer-events-none" />
 
-            {/* Video header info */}
-            <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-xs font-semibold z-10 pointer-events-none">
+            {/* Video header info (oculto no mobile) */}
+            <div className="hidden sm:flex absolute top-4 left-4 right-4 items-center justify-between text-xs font-semibold z-10 pointer-events-none">
               <div className="flex items-center gap-2 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-lg border border-pink-500/30 text-white text-xs">
                 <span className="w-2 h-2 rounded-full bg-pink-500 animate-ping" />
                 <span>Vídeo Oficial da Oferta</span>
