@@ -46,10 +46,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
           />
 
           {/* Gradient Overlay na borda esquerda: sólido #09090b e transição profunda para fusão perfeita em tela cheia */}
-          <div className="absolute inset-y-0 -left-30 w-[115%] bg-gradient-to-r from-[#09090b] via-[#09090b] via-20% lg:via-28% xl:via-35% to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-y-0 -left-40 w-[115%] bg-gradient-to-r from-[#09090b] via-[#09090b] via-20% lg:via-28% xl:via-35% to-transparent pointer-events-none z-10" />
           
           {/* Camada vertical adicional de reforço na transição da borda esquerda */}
-          <div className="absolute inset-y-0 -left-30 w-2/3 bg-gradient-to-r from-[#09090b] via-[#09090b]/90 to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-y-0 -left-40 w-2/3 bg-gradient-to-r from-[#09090b] via-[#09090b]/90 to-transparent pointer-events-none z-10" />
 
           {/* Fades de fusão suave no topo e na base */}
           <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent pointer-events-none z-10" />
