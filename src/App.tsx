@@ -27,7 +27,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] font-['Montserrat',sans-serif] selection:bg-pink-500 selection:text-white relative">
+    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] font-['Montserrat',sans-serif] selection:bg-pink-500 selection:text-white relative overflow-x-hidden">
       
       {/* 1. CARROSSEL INFINITO NO TOPO (HERO HEADER) */}
       <InfiniteTicker />

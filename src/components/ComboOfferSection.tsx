@@ -75,13 +75,21 @@ export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenChec
                     </div>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="text-xs font-mono text-zinc-400 font-semibold line-through block">
-                      {item.value}
-                    </span>
-                    {(item.title.includes("BÔNUS") || item.title.includes("SUPER BÔNUS")) && (
-                      <span className="text-[11px] font-extrabold text-emerald-400 block mt-0.5 uppercase tracking-wide">
-                        Grátis hoje
+                    {item.value === "Incluso" ? (
+                      <span className="text-xs sm:text-sm font-extrabold text-emerald-400 uppercase tracking-wide block whitespace-nowrap">
+                        Incluso
                       </span>
+                    ) : (
+                      <>
+                        <span className="text-xs font-mono text-zinc-400 font-semibold line-through block whitespace-nowrap">
+                          {item.value}
+                        </span>
+                        {(item.title.includes("BÔNUS") || item.title.includes("SUPER BÔNUS")) && (
+                          <span className="text-[11px] font-extrabold text-emerald-400 block mt-0.5 uppercase tracking-wide whitespace-nowrap">
+                            Grátis hoje
+                          </span>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
