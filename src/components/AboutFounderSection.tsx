@@ -1,6 +1,6 @@
 import React from 'react';
 import { FOUNDER_INFO } from '../data/landingData';
-import { Award, Users, Store, Heart, Instagram, Sparkles, ArrowRight } from 'lucide-react';
+import { Award, Users, Store, Heart, ArrowRight } from 'lucide-react';
 
 interface AboutFounderSectionProps {
   onOpenCheckout: () => void;
@@ -28,14 +28,6 @@ export const AboutFounderSection: React.FC<AboutFounderSectionProps> = ({ onOpen
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
-        {/* Header tag */}
-        <div className="text-center sm:text-left mb-8">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs font-bold uppercase tracking-widest">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Sua Mentora & Confeiteira</span>
-          </div>
-        </div>
-
         {/* 2-Column Split: Image & Bio */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
@@ -46,43 +38,11 @@ export const AboutFounderSection: React.FC<AboutFounderSectionProps> = ({ onOpen
                 src={FOUNDER_INFO.image}
                 alt="Natascha - Fundadora da Doces da Naty"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = 'https://lh3.googleusercontent.com/d/1og0ql-Ys1PLBAK7IqOM957dc3aXplck2';
+                }}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-              
-              <div className="absolute bottom-4 left-4 right-4">
-                <span className="text-xs font-bold text-pink-400 uppercase tracking-widest block">
-                  Doces da Naty
-                </span>
-                <h3 className="text-xl font-extrabold text-white font-dream-orphans tracking-wide">
-                  Natascha
-                </h3>
-                <p className="text-xs text-zinc-300">
-                  De ex-CLT a confeitaria própria e mais de 5.000 alunas
-                </p>
-              </div>
-            </div>
-
-            {/* Social links under photo */}
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-              <a
-                href="https://instagram.com/docesdanaty___"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs text-pink-400 border border-zinc-800 transition-colors"
-              >
-                <Instagram className="w-3.5 h-3.5" />
-                <span>@docesdanaty___</span>
-              </a>
-              <a
-                href="https://instagram.com/cursosdocesdanaty"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 hover:bg-zinc-800 text-xs text-pink-400 border border-zinc-800 transition-colors"
-              >
-                <Instagram className="w-3.5 h-3.5" />
-                <span>@cursosdocesdanaty</span>
-              </a>
             </div>
           </div>
 

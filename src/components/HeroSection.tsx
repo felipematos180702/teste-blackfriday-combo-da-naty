@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Volume2, VolumeX, ShieldCheck, CheckCircle2, Sparkles, Flame, Clock } from 'lucide-react';
+import { Play, ShieldCheck, CheckCircle2, Flame, Clock } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
 import nataschaHeroImg from '../assets/images/natascha_hero.jpg';
 import vslThumbnail from '../assets/images/hero_vsl_thumbnail_1793889840681.jpg';
@@ -10,7 +10,6 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
 
   return (
     <section className="relative overflow-hidden bg-[#09090b]">
@@ -68,7 +67,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             <div className="inline-flex items-center gap-2.5 px-5 py-2 lg:px-4.5 lg:py-1.5 rounded-full bg-gradient-to-r from-pink-500/20 via-rose-500/25 to-pink-500/20 border border-pink-500/40 text-pink-400 text-sm sm:text-base md:text-lg lg:text-base font-black uppercase tracking-widest shadow-md shadow-pink-500/10 mb-4 sm:mb-5 lg:mb-6 animate-pulse">
               <Flame className="w-5 h-5 text-pink-500 fill-pink-500" />
               <span>OFERTA EXCLUSIVA DE BLACK FRIDAY</span>
-              <Sparkles className="w-4 h-4 text-pink-300" />
             </div>
 
             {/* Headline Lateralizada à Esquerda (Reduzida 10% no desktop) */}
@@ -87,7 +85,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
                 onClick={onOpenCheckout}
                 className="w-full py-5 px-7 lg:py-4.5 lg:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-[1.35rem] uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-3"
               >
-                <Sparkles className="w-5 h-5 text-amber-200" />
                 <span>QUERO GARANTIR MEU COMBO VITALÍCIO</span>
               </button>
               
@@ -170,32 +167,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
                 </div>
               </div>
             ) : (
-              <div className="absolute inset-0 flex flex-col justify-between p-4 z-20 bg-black/40 backdrop-blur-[2px]">
-                <div className="flex justify-end">
-                  <button
-                    onClick={() => setIsMuted(!isMuted)}
-                    className="p-2.5 rounded-xl bg-black/80 hover:bg-black text-white border border-pink-500/40 transition-colors cursor-pointer flex items-center gap-2 text-xs"
-                  >
-                    {isMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-emerald-400" />}
-                    <span>{isMuted ? 'Desmutar' : 'Som Ativo'}</span>
-                  </button>
-                </div>
-
-                <div className="bg-black/85 backdrop-blur-md p-4 rounded-xl border border-pink-500/40 text-left max-w-lg mx-auto mb-2">
-                  <p className="text-xs text-pink-300 font-bold uppercase tracking-wider">Apresentando o Método Doces da Naty</p>
-                  <p className="text-sm text-white font-medium mt-1">
-                    Como sair dos erros com bolos afundados e brigadeiros no prejuízo para viver de doces de vitrine lucrativos.
-                  </p>
-                  {/* Fake interactive video scrubber */}
-                  <div className="mt-3 flex items-center gap-3">
-                    <span className="text-[11px] font-mono text-pink-400">03:15</span>
-                    <div className="flex-1 h-1.5 bg-zinc-700 rounded-full overflow-hidden">
-                      <div className="w-[38%] h-full bg-pink-500 rounded-full" />
-                    </div>
-                    <span className="text-[11px] font-mono text-zinc-400">08:42</span>
-                  </div>
-                </div>
-              </div>
+              <div
+                onClick={() => setIsPlaying(false)}
+                className="absolute inset-0 z-20 cursor-pointer"
+                title="Clique para pausar"
+              />
             )}
           </div>
         </div>
@@ -206,7 +182,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             onClick={onOpenCheckout}
             className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-black text-base sm:text-lg uppercase tracking-wider shadow-lg shadow-pink-600/30 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2"
           >
-            <Sparkles className="w-5 h-5 text-amber-200" />
             <span>QUERO ME INSCREVER NO COMBO</span>
           </button>
         </div>

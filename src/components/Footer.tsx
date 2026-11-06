@@ -1,5 +1,6 @@
 import React from 'react';
-import { Instagram, Sparkles, Shield, Heart } from 'lucide-react';
+import { Instagram, Heart } from 'lucide-react';
+import footerLogo from '../assets/images/footer_logo.png';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,16 +11,23 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-zinc-800">
           
           {/* Brand */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-2 text-white font-black text-lg">
-              <span className="w-7 h-7 rounded-lg bg-pink-600 flex items-center justify-center text-white">
-                <Sparkles className="w-3.5 h-3.5" />
+          <div className="flex items-center gap-3.5 sm:gap-4 text-left">
+            <img
+              src={footerLogo}
+              alt="Logo Doces da Naty"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = 'https://lh3.googleusercontent.com/d/1czafJNdOklNDWUkp0ec-4aloa40i42su';
+              }}
+              className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-contain shrink-0"
+            />
+            <div className="flex flex-col justify-center">
+              <span className="font-dream-orphans font-extrabold text-lg sm:text-xl text-white tracking-wide">
+                Combo Vitalício Doces da Naty
               </span>
-              <span className="font-dream-orphans font-extrabold tracking-wide">Combo Vitalício Doces da Naty</span>
+              <p className="text-zinc-400 text-xs sm:text-sm mt-0.5">
+                Bolos do Zero + Doces de Vitrine • Edição Especial de Black Friday
+              </p>
             </div>
-            <p className="text-zinc-500 text-xs mt-1">
-              Bolos do Zero + Doces de Vitrine • Edição Especial de Black Friday
-            </p>
           </div>
 
           {/* Instagram Links (Exact from prompt) */}
@@ -56,11 +64,16 @@ export const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Copyright & Signoff */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-zinc-900 text-zinc-400 text-xs">
-          <p>
-            © 2026 <strong className="text-zinc-300">Combo Vitalício Doces da Naty</strong>. Todos os direitos reservados.
-          </p>
+        {/* Copyright, CNPJ & Signoff */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-zinc-900 text-zinc-400 text-xs text-center sm:text-left">
+          <div className="space-y-1">
+            <p>
+              © 2026 <strong className="text-zinc-300">Combo Vitalício Doces da Naty</strong>. Todos os direitos reservados.
+            </p>
+            <p className="text-[11px] text-zinc-300">
+              <strong className="text-zinc-200">CURSOS DOCES DA NATY LTDA</strong> • CNPJ: <span className="font-mono">40.931.678/0001-02</span>
+            </p>
+          </div>
 
           <div className="flex items-center gap-4 text-zinc-400">
             <span>Privacidade</span>

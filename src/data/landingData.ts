@@ -3,9 +3,9 @@
  * Doces da Naty - Black Friday
  */
 
-import docesVitrineImg from '../assets/images/doces_vitrine_course_1793889841451.jpg';
-import bolosZeroImg from '../assets/images/bolos_do_zero_course_1793889842604.jpg';
-import nataschaBioImg from '../assets/images/natascha_confeiteira_bio_1793889844819.jpg';
+import docesVitrineImg from '../assets/images/doces_vitrine_course.jpg';
+import bolosZeroImg from '../assets/images/bolos_do_zero_course.jpg';
+import nataschaBioImg from '../assets/images/founder.jpg';
 
 export interface TestimonialItem {
   id: string;
@@ -73,7 +73,7 @@ export const COMBO_DELIVERABLES = [
   {
     title: "Curso Completo Bolos do Zero",
     desc: "O método passo a passo do bolo perfeito às vendas em fatias.",
-    value: "R$ 997,00"
+    value: "R$ 1.197,00"
   },
   {
     title: "Acesso Vitalício (Sem mensalidades)",

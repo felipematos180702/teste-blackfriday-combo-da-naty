@@ -18,7 +18,6 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs font-bold uppercase tracking-widest mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
             <span>2 Cursos Completos • 1 Único Investimento</span>
           </div>
 
@@ -40,8 +39,10 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
               <img
                 src={COURSE_DOCES_DE_VITRINE.image}
                 alt="Curso Doces de Vitrine"
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = 'https://lh3.googleusercontent.com/d/1l_rhqqODOwd-g20pEssaN5gotjgV9Gb3';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#18181b] via-[#18181b]/30 to-transparent" />
               
@@ -109,8 +110,10 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
               <img
                 src={COURSE_BOLOS_DO_ZERO.image}
                 alt="Curso Bolos do Zero"
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = 'https://lh3.googleusercontent.com/d/1huvEoCSyKrR27YlYsgNydO7ppSlIL4Xb';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#18181b] via-[#18181b]/30 to-transparent" />
               
