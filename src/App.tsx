@@ -14,7 +14,6 @@ import { AboutFounderSection } from './components/AboutFounderSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { CheckoutModal } from './components/CheckoutModal';
-import { StickyMobileBar } from './components/StickyMobileBar';
 
 export default function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -64,9 +63,6 @@ export default function App() {
         isOpen={isCheckoutOpen}
         onClose={handleCloseCheckout}
       />
-
-      {/* Sticky Mobile CTA Bar (<15% viewport height budget) */}
-      <StickyMobileBar onOpenCheckout={handleOpenCheckout} />
 
     </div>
   );

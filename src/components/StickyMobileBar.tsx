@@ -34,7 +34,7 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({ onOpenCheckout
             <CountdownTimer variant="bar" />
           </div>
           <span className="text-xs font-black text-white font-mono leading-tight">
-            12x R$ 186,00
+            12x R$ 109,18
           </span>
         </div>
 

@@ -23,7 +23,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
       if (typeof win.fbq === 'function') {
         win.fbq('track', 'InitiateCheckout', {
           content_name: 'Combo Vitalício: Bolos do Zero + Doces de Vitrine',
-          value: 1697.0,
+          value: 996.14,
           currency: 'BRL',
         });
       }
@@ -43,7 +43,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
         if (typeof win.fbq === 'function') {
           win.fbq('track', 'Purchase', {
             content_name: 'Combo Vitalício: Bolos do Zero + Doces de Vitrine',
-            value: 1697.0,
+            value: 996.14,
             currency: 'BRL',
           });
         }
@@ -52,14 +52,14 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
   };
 
   const copyPixCode = () => {
-    navigator.clipboard.writeText('00020126580014br.gov.bcb.pix0136docesdanaty-blackfriday-vitalicio52040000530398654071697.005802BR5925Doces da Naty Cursos6009Sao Paulo62070503***6304E3A1');
+    navigator.clipboard.writeText('00020126580014br.gov.bcb.pix0136docesdanaty-blackfriday-vitalicio5204000053039865406996.145802BR5925Doces da Naty Cursos6009Sao Paulo62070503***6304E3A1');
     setCopiedPix(true);
     if (typeof window !== 'undefined') {
       const win = window as unknown as { fbq?: (...args: unknown[]) => void };
       if (typeof win.fbq === 'function') {
         win.fbq('track', 'AddPaymentInfo', {
           content_type: 'PIX',
-          value: 1697.0,
+          value: 996.14,
           currency: 'BRL',
         });
       }
@@ -153,12 +153,12 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
               </div>
 
               <div className="text-left sm:text-right shrink-0">
-                <span className="text-xs text-zinc-400 line-through block">De: R$ 2.597,00</span>
+                <span className="text-xs text-zinc-400 line-through block">De: R$ 3.537,00</span>
                 <span className="text-xl sm:text-2xl font-black text-pink-400 font-mono">
-                  12x R$ 186,00
+                  12x R$ 109,18
                 </span>
                 <span className="text-[11px] text-emerald-400 font-semibold block">
-                  ou R$ 1.697,00 à vista
+                  ou R$ 996,14 à vista
                 </span>
               </div>
             </div>
@@ -243,7 +243,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                 >
                   <QrCode className="w-5 h-5 text-emerald-400" />
                   <span>PIX Imediato</span>
-                  <span className="text-[10px] text-emerald-400">R$ 1.697 à vista</span>
+                  <span className="text-[10px] text-emerald-400">R$ 996,14 à vista</span>
                 </button>
 
                 <button
@@ -302,11 +302,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
                       onChange={(e) => setInstallments(e.target.value)}
                       className="w-full px-3.5 py-2.5 bg-zinc-950 border border-zinc-700 rounded-xl text-white text-sm focus:border-pink-500 focus:outline-none font-medium"
                     >
-                      <option value="12">12x de R$ 186,00 (Recomendado)</option>
-                      <option value="10">10x de R$ 213,20</option>
-                      <option value="6">6x de R$ 334,50</option>
-                      <option value="3">3x de R$ 628,00</option>
-                      <option value="1">1x de R$ 1.697,00 (À vista)</option>
+                      <option value="12">12x de R$ 109,18 (Recomendado)</option>
+                      <option value="10">10x de R$ 125,10</option>
+                      <option value="6">6x de R$ 196,20</option>
+                      <option value="3">3x de R$ 368,00</option>
+                      <option value="1">1x de R$ 996,14 (À vista)</option>
                     </select>
                   </div>
                 </div>

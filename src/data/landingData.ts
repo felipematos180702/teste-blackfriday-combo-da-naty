@@ -76,18 +76,33 @@ export const COMBO_DELIVERABLES = [
     value: "R$ 1.197,00"
   },
   {
-    title: "Acesso Vitalício (Sem mensalidades)",
-    desc: "Assista quantas vezes quiser, quando quiser, sem renovações anuais.",
+    title: "BÔNUS 1: Curso de Bolo no Pote",
+    desc: "Aprenda a faturar com os bolos no pote mais vendidos e desejados do mercado.",
+    value: "R$ 597,00"
+  },
+  {
+    title: "BÔNUS 2: Curso Slices Cakes",
+    desc: "Técnicas e montagens de fatias gourmet irresistíveis e lucrativas.",
+    value: "R$ 349,00"
+  },
+  {
+    title: "BÔNUS 3: Curso de Fotos e Vídeos com a Naty (Inscrições no dia 30/11)",
+    desc: "Aprenda a criar conteúdos e fotos profissionais com o celular que vendem doces no ato.",
     value: "R$ 397,00"
   },
   {
-    title: "Modelos de Precificação + Estratégia de Vendas em Fatias",
-    desc: "Planilhas automatizadas e roteiros prontos de degustação paga.",
-    value: "R$ 297,00"
+    title: "SUPER BÔNUS EXCLUSIVO: Mentoria Individual de 6 Meses",
+    desc: "Para a 1ª aluna que comprar: acompanhamento 1 a 1 de 6 meses com a produtora para levar seu negócio ao próximo nível.",
+    value: "R$ 6.000,00"
   },
   {
-    title: "Suporte Direto para Alunas",
-    desc: "Tire dúvidas de receitas e processos com a equipe Doces da Naty.",
+    title: "Acesso Vitalício (Sem mensalidades ou anuidades)",
+    desc: "Assista quantas vezes quiser, quando quiser, com acesso permanente.",
+    value: "Incluso"
+  },
+  {
+    title: "Suporte Direto com a Equipe Doces da Naty",
+    desc: "Tire dúvidas de receitas e processos diretamente com a equipe da produtora.",
     value: "Incluso"
   }
 ];
@@ -212,6 +227,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Quais são as formas de pagamento disponíveis?",
-    answer: "Você pode parcelar em até 12x de R$ 186,00 no cartão de crédito (ou múltiplos cartões), pagar à vista no PIX com liberação instantânea por R$ 1.697,00, ou através de boleto bancário."
+    answer: "Você pode parcelar em até 12x de R$ 109,18 no cartão de crédito (ou múltiplos cartões), pagar à vista no PIX com liberação instantânea por R$ 996,14, ou através de boleto bancário."
   }
 ];

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Play, ShieldCheck, CheckCircle2, Flame, Clock } from 'lucide-react';
-import { CountdownTimer } from './CountdownTimer';
 import nataschaHeroImg from '../assets/images/natascha_hero.jpg';
 import vslThumbnail from '../assets/images/hero_vsl_thumbnail_1793889840681.jpg';
 
@@ -69,8 +68,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
               <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-pink-500 fill-pink-500 shrink-0" />
             </div>
 
-            {/* Headline Centralizada no Mobile / Lateralizada à Esquerda no Desktop (Aumentada no mobile para 3 linhas) */}
-            <h1 className="text-[2.45rem] min-[380px]:text-[2.7rem] sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.35rem] 2xl:text-[4.7rem] font-black text-white tracking-tight sm:tracking-wide leading-[1.04] font-dream-orphans [text-wrap:balance] text-center lg:text-left px-0">
+            {/* Headline Centralizada no Mobile (33.2px) / Lateralizada à Esquerda no Desktop */}
+            <h1 className="text-[33.2px] sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.35rem] 2xl:text-[4.7rem] font-black text-white tracking-tight sm:tracking-wide leading-[1.04] font-dream-orphans [text-wrap:balance] text-center lg:text-left px-0">
               Conquiste sua <span className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent">independência financeira</span> através da confeitaria descomplicada
             </h1>
 
@@ -80,31 +79,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             </p>
 
             {/* Botão CTA Centralizado no Mobile / Lateralizado no Desktop */}
-            <div className="mt-6 sm:mt-7 lg:mt-8 flex flex-col items-center lg:items-start w-full max-w-lg">
+            <div className="mt-5 sm:mt-7 lg:mt-8 flex flex-col items-center lg:items-start w-full max-w-lg">
               <button
                 onClick={onOpenCheckout}
-                className="w-full py-5 px-7 lg:py-4.5 lg:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-[1.35rem] uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-3"
+                className="w-full py-3.5 px-4 sm:py-5 sm:px-7 lg:py-4.5 lg:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-[15px] sm:text-xl md:text-2xl lg:text-xl xl:text-[1.35rem] uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-2.5 sm:gap-3"
               >
                 <span>QUERO GARANTIR MEU COMBO VITALÍCIO</span>
               </button>
               
-              <p className="mt-2 text-xs sm:text-sm text-zinc-400 text-center lg:text-left">
+              <p className="mt-2 text-[11px] sm:text-sm text-zinc-400 text-center lg:text-left">
                 Acesso vitalício sem renovação • Garantia de 7 dias • Vagas limitadas
               </p>
             </div>
 
             {/* Micro Trust Badges Centralizados no Mobile */}
-            <div className="mt-6 sm:mt-7 lg:mt-8 pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-zinc-300 text-base sm:text-lg lg:text-base">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+            <div className="mt-4 sm:mt-7 lg:mt-8 pt-4 sm:pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-6 text-zinc-300 text-xs sm:text-lg lg:text-base">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" />
                 <span>Acesso imediato às aulas</span>
               </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-pink-400 shrink-0" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-pink-400 shrink-0" />
                 <span>7 dias de garantia total</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" />
                 <span>Certificado incluso</span>
               </div>
             </div>
@@ -117,9 +116,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
       {/* 2. PARTE INFERIOR: CRONÔMETRO E VSL CENTRALIZADOS ABAIXO DO HERO */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pb-24 flex flex-col items-center text-center border-t border-zinc-900/60">
         
-        {/* Cronômetro Centralizado */}
-        <div className="mb-10 flex flex-col items-center justify-center w-full">
-          <CountdownTimer variant="hero" align="center" />
+        {/* Informação de Duração da Oferta (72h) - Reduzida no mobile e em Amarelo */}
+        <div className="mb-6 sm:mb-10 flex flex-col items-center justify-center w-full">
+          <div className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 px-3.5 py-1.5 sm:px-6 sm:py-3 rounded-xl sm:rounded-2xl bg-amber-500/10 border border-amber-500/40 text-amber-300 font-bold text-[11px] sm:text-base md:text-lg shadow-lg shadow-amber-950/20 text-center [text-wrap:balance]">
+            <Clock className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-amber-400 shrink-0 animate-pulse" />
+            <span>ESTA OFERTA ESPECIAL ESTARÁ DISPONÍVEL APENAS NAS PRÓXIMAS <strong className="text-amber-400 font-black underline decoration-amber-400 decoration-2">72 HORAS</strong></span>
+          </div>
         </div>
 
         {/* Espaço/Placeholder estilizado para VSL (Vídeo de Vendas) Centralizado */}
