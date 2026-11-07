@@ -16,7 +16,6 @@ const COMPARISON_ITEMS = [
   { title: 'Estratégia de Degustação Paga (Fatias Lucrativas)', nessaBlack: true, depois: false },
   { title: 'Planilhas Automatizadas de Precificação Real', nessaBlack: true, depois: false },
   { title: 'Suporte Direto com a Equipe Doces da Naty', nessaBlack: true, depois: false },
-  { title: 'Certificados Oficiais Inclusos', nessaBlack: true, depois: false },
 ];
 
 export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenCheckout }) => {

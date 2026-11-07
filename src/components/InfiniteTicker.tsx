@@ -3,7 +3,7 @@ import { TICKER_ITEMS } from '../data/landingData';
 
 export const InfiniteTicker: React.FC = () => {
   return (
-    <div className="relative w-full h-14 sm:h-16 md:h-18 flex items-center overflow-hidden bg-gradient-to-r from-pink-600 via-rose-600 to-pink-600 text-white border-b-2 border-pink-500/40 z-30 shadow-xl shadow-pink-950/30 select-none">
+    <div className="sticky top-0 w-full h-14 sm:h-16 md:h-18 flex items-center overflow-hidden bg-gradient-to-r from-pink-600 via-rose-600 to-pink-600 text-white border-b-2 border-pink-500/40 z-50 shadow-xl shadow-pink-950/30 select-none">
       <div className="flex animate-marquee whitespace-nowrap items-center">
         {/* Render twice for seamless loop */}
         {[0, 1].map((setIndex) => (

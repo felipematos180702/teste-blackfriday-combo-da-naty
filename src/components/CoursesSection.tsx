@@ -182,7 +182,6 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
             onClick={onOpenCheckout}
             className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-bold text-base shadow-lg shadow-pink-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
           >
-            <Sparkles className="w-5 h-5 text-pink-200" />
             <span>QUERO OS 2 CURSOS COM ACESSO VITALÍCIO</span>
           </button>
         </div>

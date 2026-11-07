@@ -165,7 +165,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
                   <Play className="w-9 h-9 sm:w-11 sm:h-11 translate-x-1 fill-white" />
                 </button>
                 <div className="mt-4 px-4 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-pink-500/30 text-white text-xs sm:text-sm font-semibold tracking-wide">
-                  Clique para assistir à aula da Natascha
+                  Clique para assistir
                 </div>
               </div>
             ) : (
@@ -184,7 +184,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             onClick={onOpenCheckout}
             className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-black text-base sm:text-lg uppercase tracking-wider shadow-lg shadow-pink-600/30 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2"
           >
-            <span>QUERO ME INSCREVER NO COMBO</span>
+            <span>QUERO MINHA VAGA AGORA</span>
           </button>
         </div>
 
