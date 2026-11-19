@@ -65,7 +65,7 @@ export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenChec
               </div>
               <div className="col-span-3 py-2.5 sm:py-4 text-center px-1">
                 <span className="text-xs sm:text-lg md:text-xl font-bold text-zinc-400 font-mono whitespace-nowrap">
-                  R$ 3.537
+                  R$ 1.697
                 </span>
               </div>
             </div>
@@ -109,13 +109,15 @@ export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenChec
 
           {/* Botão de Ação pós-tabela */}
           <div className="mt-12 text-center max-w-md mx-auto">
-            <button
-              onClick={onOpenCheckout}
+            <a
+              href="https://pay.hotmart.com/H103943890J?off=pt1g1tq0&checkoutMode=10"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-3.5 px-4 sm:py-5 sm:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-[15px] sm:text-lg uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-2"
             >
               <span>QUERO GARANTIR NESSA BLACK</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-            </button>
+            </a>
             <p className="mt-2.5 text-xs text-zinc-400">
               Acesso vitalício a todos os cursos e bônus • Economia de R$ 2.540,86 • Garantia de 7 dias
             </p>

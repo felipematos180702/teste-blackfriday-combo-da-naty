@@ -3,7 +3,7 @@
  * Combo Vitalício: Bolos do Zero + Doces de Vitrine (Doces da Naty)
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { InfiniteTicker } from './components/InfiniteTicker';
 import { HeroSection } from './components/HeroSection';
 import { CoursesSection } from './components/CoursesSection';
@@ -13,17 +13,12 @@ import { TestimonialsMarquee } from './components/TestimonialsMarquee';
 import { AboutFounderSection } from './components/AboutFounderSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
-import { CheckoutModal } from './components/CheckoutModal';
+
+const HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/H103943890J?off=pt1g1tq0&checkoutMode=10';
 
 export default function App() {
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-
   const handleOpenCheckout = () => {
-    setIsCheckoutOpen(true);
-  };
-
-  const handleCloseCheckout = () => {
-    setIsCheckoutOpen(false);
+    window.location.href = HOTMART_CHECKOUT_URL;
   };
 
   return (
@@ -57,12 +52,6 @@ export default function App() {
 
       {/* 8. RODAPÉ (FOOTER) */}
       <Footer />
-
-      {/* Checkout Modal Interativo */}
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={handleCloseCheckout}
-      />
 
     </div>
   );

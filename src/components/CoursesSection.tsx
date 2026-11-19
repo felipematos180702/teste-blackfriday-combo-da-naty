@@ -178,12 +178,12 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
 
         {/* Bottom Banner inside Course Section */}
         <div className="mt-12 text-center">
-          <button
-            onClick={onOpenCheckout}
+          <a
+            href="#oferta"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-bold text-base shadow-lg shadow-pink-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
           >
             <span>QUERO OS 2 CURSOS COM ACESSO VITALÍCIO</span>
-          </button>
+          </a>
         </div>
 
       </div>

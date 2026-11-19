@@ -80,12 +80,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
 
             {/* Botão CTA Centralizado no Mobile / Lateralizado no Desktop */}
             <div className="mt-5 sm:mt-7 lg:mt-8 flex flex-col items-center lg:items-start w-full max-w-lg">
-              <button
-                onClick={onOpenCheckout}
+              <a
+                href="#oferta"
                 className="w-full py-3.5 px-4 sm:py-5 sm:px-7 lg:py-4.5 lg:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-[15px] sm:text-xl md:text-2xl lg:text-xl xl:text-[1.35rem] uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-2.5 sm:gap-3"
               >
                 <span>QUERO GARANTIR MEU COMBO VITALÍCIO</span>
-              </button>
+              </a>
               
               <p className="mt-2 text-[11px] sm:text-sm text-zinc-400 text-center lg:text-left">
                 Acesso vitalício sem renovação • Garantia de 7 dias • Vagas limitadas
@@ -176,12 +176,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
 
         {/* CTA complementar após o VSL */}
         <div className="w-full max-w-md mx-auto">
-          <button
-            onClick={onOpenCheckout}
+          <a
+            href="#oferta"
             className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-black text-base sm:text-lg uppercase tracking-wider shadow-lg shadow-pink-600/30 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2"
           >
             <span>QUERO MINHA VAGA AGORA</span>
-          </button>
+          </a>
         </div>
 
       </div>
