@@ -22,10 +22,10 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white font-dream-orphans tracking-wide [text-wrap:balance]">
-            O que você vai dominar no <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">Combo Vitalício</span>
+            O que você terá ao adquirir o <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">combo vitalício</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-300">
-            A união perfeita entre a produção de confeitaria de altíssimo padrão e a mentalidade de negócio para vender todos os dias.
+            Além de dominar a produção dos bolos festivos e fatias, vai aprender as bases mais importantes para vender seus doces todos os dias, as receitas de sucesso e o conhecimento sobre precificação, gestão financeira, vendas e divulgação.
           </p>
         </div>
 
@@ -81,14 +81,14 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
 
               {/* Exact Highlight */}
               <div className="p-4 rounded-2xl bg-zinc-900/80 border border-zinc-800 text-zinc-200 text-sm font-medium">
-                <span className="text-pink-400 font-bold block mb-1">O Método Prático da Loja Real:</span>
+                <span className="text-pink-400 font-bold block mb-1">O método que funciona na minha loja:</span>
                 {COURSE_DOCES_DE_VITRINE.highlight}
               </div>
 
               {/* Features Pill List */}
               <div className="pt-2">
                 <h4 className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-3">
-                  Principais Pilares do Curso:
+                  Principais pilares do curso:
                 </h4>
                 <ul className="space-y-2.5">
                   {COURSE_DOCES_DE_VITRINE.features.map((feat, idx) => (
@@ -159,7 +159,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
               {/* Features Pill List */}
               <div className="pt-2">
                 <h4 className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-3">
-                  Técnicas e Habilidades Ensinadas:
+                  Técnicas ensinadas:
                 </h4>
                 <ul className="space-y-2.5">
                   {COURSE_BOLOS_DO_ZERO.features.map((feat, idx) => (

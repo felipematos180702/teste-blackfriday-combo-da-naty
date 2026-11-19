@@ -80,12 +80,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenCheckout }) => {
             </div>
           </div>
 
-          <button
-            onClick={onOpenCheckout}
-            className="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs sm:text-sm whitespace-nowrap transition-colors"
+          <a
+            href="https://wa.me/553193476920"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-xs sm:text-sm whitespace-nowrap transition-colors cursor-pointer inline-block"
           >
-            Falar com Suporte / Comprar
-          </button>
+            Falar com Suporte
+          </a>
         </div>
 
       </div>

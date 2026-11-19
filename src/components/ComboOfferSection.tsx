@@ -50,7 +50,7 @@ export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenChec
                 Tudo o que você vai receber:
               </h3>
               <p className="text-xs sm:text-sm md:text-base text-pink-400 font-semibold mt-1.5">
-                Acesso completo e irrestrito sem nenhuma cobrança futura.
+                Acesso completo sem nenhuma cobrança futura
               </p>
             </div>
 

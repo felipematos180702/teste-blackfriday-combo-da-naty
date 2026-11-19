@@ -77,10 +77,10 @@ export const TestimonialsMarquee: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white font-dream-orphans tracking-wide [text-wrap:balance]">
-            Mais de 5.000 alunas transformando <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">paixão em lucro diário</span>
+            Mais de 5.000 alunas colocaram o <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">método da Naty em prática</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-300">
-            Veja relatos reais de confeiteiras que começaram do zero e hoje faturam com massas perfeitas e fatias de vitrine.
+            Veja relatos reais de confeitarias que aplicaram as técnicas e colheram os resultados.
           </p>
         </div>
       </div>

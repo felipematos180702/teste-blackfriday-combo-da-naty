@@ -95,10 +95,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             {/* Micro Trust Badges Centralizados no Mobile */}
             <div className="mt-4 sm:mt-7 lg:mt-8 pt-4 sm:pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-6 text-zinc-300 text-xs sm:text-lg lg:text-base">
               <div className="flex items-center gap-1.5 sm:gap-2">
-                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" />
-                <span>Acesso imediato às aulas</span>
-              </div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
                 <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-pink-400 shrink-0" />
                 <span>7 dias de garantia total</span>
               </div>

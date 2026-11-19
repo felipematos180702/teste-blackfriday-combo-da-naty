@@ -22,7 +22,6 @@ export interface TestimonialItem {
 export const TICKER_ITEMS = [
   "OFERTA VITALÍCIA",
   "BLACK FRIDAY",
-  "ACESSO IMEDIATO",
   "CURSO BOLOS DO ZERO + DOCES DE VITRINE",
   "BÔNUS EXCLUSIVOS",
   "VAGAS LIMITADAS",
@@ -39,11 +38,12 @@ export const COURSE_DOCES_DE_VITRINE = {
   description: "No Doces de vitrine você entende que para crescer na confeitaria é preciso saber os pilares mais importantes, e não estamos falando apenas dos doces, é preciso aprender sobre vendas, divulgação, precificação, delivery e gestão financeira.",
   highlight: "É o passo a passo que usei para construir a Doces da Naty do zero, e que você terá acesso para aplicar na sua confeitaria.",
   features: [
-    "Doces que mais vendem no balcão e delivery",
-    "Engenharia de vitrine e apresentação magnética",
-    "Precificação à prova de prejuízo com planilhas práticas",
-    "Gestão financeira simplificada para confeitaria real",
-    "Estratégia de tráfego, Instagram e captação de clientes"
+    "Doces que mais vendem na loja e delivery",
+    "Gestão financeira simplificada para a empreendedora",
+    "Precificação + ficha técnica com planilhas práticas",
+    "Estratégias para divulgação, Instagram, fotos e vídeos",
+    "Treinamento prático para atendimento ao cliente e vendas pelo WhatsApp",
+    "Ensinamentos sobre público alvo e delivery"
   ]
 };
 
@@ -56,11 +56,11 @@ export const COURSE_BOLOS_DO_ZERO = {
   description: "Para fazer bolos com segurança você precisa da massa certa, o recheio no ponto, a montagem padronizada, a decoração impecável e o sabor irresistível.",
   highlight: "Além disso, eu te ensino como vender bolos diariamente através das fatias, que são o ponta pé para o cliente conhecer o sabor do seu bolo, é o que eu chamo de degustação paga.",
   features: [
-    "Massas estruturadas, fofinhas e ultra úmidas",
-    "Recheios firmes sem amido que não desmoronam",
-    "Montagem e prensagem padronizada profissional",
-    "Técnicas de decoração comerciais que vendem rápido",
-    "A lendária estratégia de Degustação Paga com Fatias"
+    "Massas estruturadas",
+    "Recheios sem amido e que não desmoronam",
+    "Montagem e prensagem com padronização",
+    "Decorações detalhadas com uso das ganaches",
+    "Produção das fatias para aplicação da “degustação paga”"
   ]
 };
 
@@ -92,7 +92,7 @@ export const COMBO_DELIVERABLES = [
   },
   {
     title: "SUPER BÔNUS EXCLUSIVO: Mentoria Individual de 6 Meses",
-    desc: "Para a 1ª aluna que comprar: acompanhamento 1 a 1 de 6 meses com a produtora para levar seu negócio ao próximo nível.",
+    desc: "Para a primeira aluna que comprar o combo, acompanhamento da Naty durante 6 meses para levar seu negócio ao próximo nível",
     value: "R$ 6.000,00"
   },
   {
@@ -101,8 +101,8 @@ export const COMBO_DELIVERABLES = [
     value: "Incluso"
   },
   {
-    title: "Suporte Direto com a Equipe Doces da Naty",
-    desc: "Tire dúvidas de receitas e processos diretamente com a equipe da produtora.",
+    title: "Suporte dentro da plataforma",
+    desc: "A maioria dos cursos vitalícios não oferecem suporte, mas no caso do combo da Naty, você poderá tirar suas dúvidas enviando perguntas dentro da plataforma de aulas",
     value: "Incluso"
   }
 ];
@@ -207,7 +207,7 @@ export const INITIAL_TESTIMONIALS: TestimonialItem[] = [
 export const FAQ_ITEMS = [
   {
     question: "O que exatamente significa o Acesso Vitalício?",
-    answer: "Significa que você não precisará pagar nenhuma mensalidade ou renovação anual. Uma vez inscrita nesta Black Friday, os cursos Bolos do Zero e Doces de Vitrine serão seus para sempre, incluindo todas as futuras atualizações de receitas e módulos."
+    answer: "Significa que você não precisará pagar nenhuma mensalidade ou renovação anual. Uma vez inscrita nesta Black Friday, os cursos Bolos do Zero e Doces de Vitrine serão seus para sempre."
   },
   {
     question: "Eu nunca fiz bolos antes, os cursos servem para iniciantes?",

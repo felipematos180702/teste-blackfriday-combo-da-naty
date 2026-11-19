@@ -7,15 +7,12 @@ interface ComparisonSectionProps {
 
 const COMPARISON_ITEMS = [
   { title: 'Curso Completo Bolos do Zero', nessaBlack: true, depois: true },
-  { title: 'Curso Completo Doces de Vitrine', nessaBlack: true, depois: false },
+  { title: 'Curso Completo Doces de Vitrine', nessaBlack: true, depois: true },
   { title: 'Bônus: Curso de Bolo no Pote', nessaBlack: true, depois: false },
   { title: 'Bônus: Curso Slices Cakes', nessaBlack: true, depois: false },
   { title: 'Bônus: Curso de Fotos (para inscritas no dia 30/11)', nessaBlack: true, depois: false },
   { title: 'Super Bônus: Mentoria Individual 6 Meses (1ª aluna)', nessaBlack: true, depois: false },
   { title: 'Acesso Vitalício sem renovação anual', nessaBlack: true, depois: false },
-  { title: 'Estratégia de Degustação Paga (Fatias Lucrativas)', nessaBlack: true, depois: false },
-  { title: 'Planilhas Automatizadas de Precificação Real', nessaBlack: true, depois: false },
-  { title: 'Suporte Direto com a Equipe Doces da Naty', nessaBlack: true, depois: false },
 ];
 
 export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenCheckout }) => {
