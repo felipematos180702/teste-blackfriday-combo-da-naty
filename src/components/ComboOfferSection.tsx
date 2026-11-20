@@ -81,7 +81,7 @@ export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenChec
                       </span>
                     ) : (
                       <>
-                        <span className="text-xs font-mono text-zinc-400 font-semibold line-through block whitespace-nowrap">
+                        <span className="text-xs font-montserrat text-zinc-400 font-semibold line-through block whitespace-nowrap">
                           {item.value}
                         </span>
                         {(item.title.includes("BÔNUS") || item.title.includes("SUPER BÔNUS")) && (
@@ -103,7 +103,7 @@ export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenChec
                   <span className="text-xs sm:text-sm text-zinc-400 uppercase tracking-wider block font-medium">
                     Preço de Todos os Cursos Separados:
                   </span>
-                  <span className="text-lg sm:text-xl text-zinc-400 font-bold line-through font-mono block">
+                  <span className="text-lg sm:text-xl text-zinc-400 font-bold line-through font-montserrat block">
                     De: R$ 3.537,00
                   </span>
                   <span className="text-xs text-pink-300/90 block">
@@ -123,7 +123,7 @@ export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenChec
                 </span>
                 <div className="flex items-baseline justify-center gap-1 sm:gap-2 whitespace-nowrap">
                   <span className="text-lg min-[360px]:text-xl sm:text-3xl font-black text-white">12x de</span>
-                  <span className="text-2xl min-[360px]:text-3xl sm:text-5xl md:text-6xl font-black text-pink-400 font-mono tracking-tight drop-shadow-md">
+                  <span className="text-2xl min-[360px]:text-3xl sm:text-5xl md:text-6xl font-black text-pink-400 font-montserrat tracking-tight drop-shadow-md">
                     R$ 109,18 <span className="text-base sm:text-lg text-pink-300">*</span>
                   </span>
                 </div>

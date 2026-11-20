@@ -1,8 +1,10 @@
-import React from 'react';
-import { Instagram, Heart } from 'lucide-react';
+import React, { useState } from 'react';
+import { Instagram, Heart, ChevronDown } from 'lucide-react';
 import footerLogo from '../assets/images/footer_logo.png';
 
 export const Footer: React.FC = () => {
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+
   return (
     <footer className="bg-black border-t border-zinc-900 text-zinc-400 text-xs py-14 pb-20 md:pb-14">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -54,14 +56,28 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Legal Disclaimer & Notice */}
-        <div className="space-y-4 text-zinc-300 text-[11px] leading-relaxed max-w-4xl mx-auto text-center md:text-left">
-          <p>
-            <strong className="text-zinc-400">Aviso Legal & Termos de Resultados:</strong> Os resultados mencionados nesta página, faturamentos, depoimentos de alunas e estratégias de vitrine são baseados na vivência real da loja Doces da Naty e nos casos práticos de alunas que aplicaram o método com dedicação. Os resultados individuais podem variar de acordo com o esforço, dedicação, localidade e aplicação consistente dos processos ensinados. Nenhuma promessa de ganho fácil é feita.
-          </p>
-          <p>
-            Este produto não garante a obtenção de resultados financeiros sem trabalho prático. Ao adquirir o Combo Vitalício, você tem direito a 7 dias de garantia incondicional para testar todo o conteúdo. Pagamento processado em ambiente 100% seguro com criptografia de ponta a ponta.
-          </p>
+        {/* Legal Disclaimer & Notice (Collapsible) */}
+        <div className="max-w-4xl mx-auto text-center md:text-left">
+          <button
+            type="button"
+            onClick={() => setShowDisclaimer((prev) => !prev)}
+            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-zinc-200 transition-colors cursor-pointer text-[11px] font-bold"
+            aria-expanded={showDisclaimer}
+          >
+            <strong>Aviso Legal & Termos de Resultados</strong>
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${showDisclaimer ? 'rotate-180 text-pink-400' : ''}`} />
+          </button>
+
+          {showDisclaimer && (
+            <div className="mt-3 space-y-3 text-zinc-300 text-[11px] leading-relaxed">
+              <p>
+                Os resultados mencionados nesta página, faturamentos, depoimentos de alunas e estratégias de vitrine são baseados na vivência real da loja Doces da Naty e nos casos práticos de alunas que aplicaram o método com dedicação. Os resultados individuais podem variar de acordo com o esforço, dedicação, localidade e aplicação consistente dos processos ensinados. Nenhuma promessa de ganho fácil é feita.
+              </p>
+              <p>
+                Este produto não garante a obtenção de resultados financeiros sem trabalho prático. Ao adquirir o Combo Vitalício, você tem direito a 7 dias de garantia incondicional para testar todo o conteúdo. Pagamento processado em ambiente 100% seguro com criptografia de ponta a ponta.
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Copyright, CNPJ & Signoff */}
@@ -71,7 +87,7 @@ export const Footer: React.FC = () => {
               © 2026 <strong className="text-zinc-300">Combo Vitalício Doces da Naty</strong>. Todos os direitos reservados.
             </p>
             <p className="text-[11px] text-zinc-300">
-              <strong className="text-zinc-200">CURSOS DOCES DA NATY LTDA</strong> • CNPJ: <span className="font-mono">40.931.678/0001-02</span>
+              <strong className="text-zinc-200">CURSOS DOCES DA NATY LTDA</strong> • CNPJ: <span className="font-montserrat">40.931.678/0001-02</span>
             </p>
           </div>
 

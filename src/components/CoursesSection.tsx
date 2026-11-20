@@ -69,7 +69,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
               {/* Exact Quote */}
               <div className="relative pl-6 py-1 border-l-2 border-pink-500 bg-pink-500/5 rounded-r-xl pr-4">
                 <Quote className="w-5 h-5 text-pink-400 absolute top-2 -left-2.5 bg-[#18181b] rounded-full p-0.5" />
-                <p className="italic text-sm sm:text-base text-zinc-200 leading-relaxed font-serif">
+                <p className="italic text-sm sm:text-base text-zinc-200 leading-relaxed font-montserrat">
                   "{COURSE_DOCES_DE_VITRINE.quote}"
                 </p>
               </div>
@@ -140,7 +140,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
               {/* Exact Quote */}
               <div className="relative pl-6 py-1 border-l-2 border-pink-500 bg-pink-500/5 rounded-r-xl pr-4">
                 <Quote className="w-5 h-5 text-pink-400 absolute top-2 -left-2.5 bg-[#18181b] rounded-full p-0.5" />
-                <p className="italic text-sm sm:text-base text-zinc-200 leading-relaxed font-serif">
+                <p className="italic text-sm sm:text-base text-zinc-200 leading-relaxed font-montserrat">
                   "{COURSE_BOLOS_DO_ZERO.quote}"
                 </p>
               </div>

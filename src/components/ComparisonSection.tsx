@@ -59,12 +59,12 @@ export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenChec
                 </span>
               </div>
               <div className="col-span-3 py-2.5 sm:py-4 text-center bg-pink-950/25 border-x border-pink-500/30 px-1">
-                <span className="text-xs sm:text-lg md:text-xl font-black text-white font-mono whitespace-nowrap">
+                <span className="text-xs sm:text-lg md:text-xl font-black text-white font-montserrat whitespace-nowrap">
                   R$ 996,14
                 </span>
               </div>
               <div className="col-span-3 py-2.5 sm:py-4 text-center px-1">
-                <span className="text-xs sm:text-lg md:text-xl font-bold text-zinc-400 font-mono whitespace-nowrap">
+                <span className="text-xs sm:text-lg md:text-xl font-bold text-zinc-400 font-montserrat whitespace-nowrap">
                   R$ 1.697
                 </span>
               </div>
