@@ -17,15 +17,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
       <div className="relative min-h-[70vh] lg:min-h-[88vh] xl:min-h-[92vh] flex flex-col lg:flex-row lg:items-center">
         
         {/* Versão Mobile: Foto da produtora no topo da seção com maior destaque e camada overlay na base */}
-        <div className="hero-mobile-layer lg:hidden relative z-20 w-full h-[480px] sm:h-[560px] overflow-hidden bg-zinc-950">
+        <div className="hero-mobile-layer lg:hidden relative z-20 w-full h-[460px] sm:h-[535px] overflow-hidden bg-zinc-950">
           <img
-            src={nataschaHeroImg}
+            src="/assets/aistudio/imagem_naty_black_b98c8f4a.JPG"
             alt="Natascha - Doces da Naty"
             loading="eager"
             decoding="sync"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[center_92%]"
             onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = '/images/natascha_hero.jpg';
+              (e.currentTarget as HTMLImageElement).src = nataschaHeroImg;
             }}
           />
           {/* Camada overlay na parte de baixo da foto */}
@@ -36,11 +36,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
         {/* Versão Desktop: Background Image no lado direito encostada na lateral direita */}
         <div className="hero-desktop-layer hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[720px] xl:w-[840px] 2xl:w-[940px] pointer-events-none z-0 items-end justify-end overflow-hidden">
           <img
-            src={nataschaHeroImg}
+            src="/assets/aistudio/imagem_naty_black_b98c8f4a.JPG"
             alt="Natascha - Doces da Naty"
             className="h-full w-full max-h-full object-contain object-[right_bottom] opacity-95 scale-[1.32] xl:scale-[1.35] origin-bottom-right translate-y-12 xl:translate-y-25 transition-all duration-700 [mask-image:linear-gradient(to_right,transparent_0%,transparent_12%,black_38%,black_100%)] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,transparent_12%,black_38%,black_100%)]"
             onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = '/images/natascha_hero.jpg';
+              (e.currentTarget as HTMLImageElement).src = nataschaHeroImg;
             }}
           />
 
@@ -59,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
         </div>
 
         {/* Hero Content: No mobile os textos são centralizados para dar destaque, no desktop fica lateralizado à esquerda */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:pl-4 xl:pl-6 lg:pr-8 mt-2 sm:mt-4 lg:mt-0 py-4 sm:py-6 md:py-8 lg:py-12 xl:py-14">
+        <div className="relative z-30 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:pl-4 xl:pl-6 lg:pr-8 -mt-12 sm:-mt-14 lg:mt-0 pt-0 pb-4 sm:pb-6 md:py-8 lg:py-12 xl:py-14">
           <div className="max-w-2xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl flex flex-col items-center text-center lg:items-start lg:text-left mx-auto lg:mx-0 lg:-translate-x-3 xl:-translate-x-6">
             
             {/* Badge: OFERTA EXCLUSIVA DE BLACK FRIDAY (Sem caixa no mobile, fogo ao final e em linha única) */}
