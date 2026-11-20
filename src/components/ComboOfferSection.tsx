@@ -142,7 +142,7 @@ export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenChec
                 href="https://pay.hotmart.com/H103943890J?off=pt1g1tq0&checkoutMode=10"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-4 sm:py-5 sm:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-[15px] sm:text-xl uppercase tracking-wider shadow-2xl shadow-pink-600/50 animate-pink-pulse hover:shadow-pink-600/80 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-2 sm:gap-3"
+                className="w-full py-3.5 px-4 sm:py-5 sm:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-[15px] sm:text-xl uppercase tracking-wider shadow-2xl shadow-pink-600/50 animate-pink-pulse hover:shadow-pink-600/80 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-2 sm:gap-3 text-center"
               >
                 <span>QUERO GARANTIR MEU COMBO VITALÍCIO</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />

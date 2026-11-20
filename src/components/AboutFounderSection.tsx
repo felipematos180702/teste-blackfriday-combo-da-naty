@@ -69,7 +69,7 @@ export const AboutFounderSection: React.FC<AboutFounderSectionProps> = ({ onOpen
                 href="https://pay.hotmart.com/H103943890J?off=pt1g1tq0&checkoutMode=10"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-700 text-white font-bold text-sm uppercase tracking-wider transition-colors shadow-lg shadow-pink-900/40 cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-pink-600 hover:bg-pink-700 text-white font-bold text-sm uppercase tracking-wider transition-colors shadow-lg shadow-pink-900/40 cursor-pointer text-center"
               >
                 <span>Aprender com a Naty no Combo</span>
                 <ArrowRight className="w-4 h-4" />
