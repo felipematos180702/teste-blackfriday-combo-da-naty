@@ -16,14 +16,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
       {/* 1. PARTE SUPERIOR DO HERO: MOBILE (FOTO NO TOPO + OVERLAY) / DESKTOP (SPLIT LATERALIZADO) */}
       <div className="relative min-h-[70vh] lg:min-h-[88vh] xl:min-h-[92vh] flex flex-col lg:flex-row lg:items-center">
         
-        {/* Versão Mobile: Foto da produtora no topo da seção com maior destaque e camada overlay na base */}
-        <div className="hero-mobile-layer lg:hidden relative z-20 w-full h-[460px] sm:h-[535px] overflow-hidden bg-zinc-950">
+        {/* Versão Mobile / Tablet: Foto da produtora no topo da seção com maior destaque e camada overlay na base */}
+        <div className="hero-mobile-layer lg:hidden relative z-20 w-full h-[460px] sm:h-[640px] md:h-[740px] overflow-hidden bg-zinc-950">
           <img
             src="/assets/aistudio/imagem_naty_black_b98c8f4a.JPG"
             alt="Natascha - Doces da Naty"
             loading="eager"
             decoding="sync"
-            className="w-full h-full object-cover object-[center_92%]"
+            className="w-full h-full object-cover object-[center_82%] sm:object-[center_32%] md:object-[center_28%]"
             onError={(e) => {
               (e.currentTarget as HTMLImageElement).src = nataschaHeroImg;
             }}
