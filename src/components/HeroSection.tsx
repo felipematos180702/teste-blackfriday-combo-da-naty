@@ -70,21 +70,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
 
             {/* Headline Centralizada no Mobile (33.2px) / Lateralizada à Esquerda no Desktop */}
             <h1 className="text-[33.2px] sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.35rem] 2xl:text-[4.7rem] font-black text-white tracking-tight sm:tracking-wide leading-[1.04] font-dream-orphans [text-wrap:balance] text-center lg:text-left px-0">
-              Conquiste sua <span className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent">independência financeira</span> através da confeitaria descomplicada
+              <span className="block">Black da Naty com</span>
+              <span className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent block">oferta especial</span>
             </h1>
 
             {/* Subheadline Centralizada no Mobile / Lateralizada à Esquerda no Desktop */}
-            <p className="mt-4 sm:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-[1.25rem] xl:text-[1.3rem] text-zinc-200 font-medium leading-relaxed max-w-2xl xl:max-w-3xl 2xl:max-w-4xl [text-wrap:balance] text-center lg:text-left">
-              Acesso <strong className="text-white font-bold">VITALÍCIO</strong> aos 2 cursos mais completos e lucrativos da Doces da Naty: domine massas e recheios infalíveis no <span className="text-pink-400 font-semibold">Bolos do Zero</span> e monte um delivery de vendas diárias com o <span className="text-pink-400 font-semibold">Doces de Vitrine</span> — tudo pelo preço de um único curso.
+            <p className="mt-4 sm:mt-5 lg:mt-6 text-base sm:text-lg md:text-xl lg:text-[1.25rem] xl:text-[1.3rem] text-zinc-200 font-normal leading-relaxed max-w-2xl xl:max-w-3xl 2xl:max-w-4xl text-center lg:text-left">
+              Tenha acesso <strong className="text-pink-400 font-bold">pelo resto da vida</strong> aos meus dois cursos que são a base para se profissionalizar na confeitaria. O <strong className="text-white font-bold">Bolos do zero</strong> e o <strong className="text-white font-bold">Doces de vitrine</strong> são os cursos mais completos para você aprender TUDO sobre confeitaria e começar a faturar com doces de bolos festivos todos os dias.
             </p>
 
             {/* Botão CTA Centralizado no Mobile / Lateralizado no Desktop */}
             <div className="mt-5 sm:mt-7 lg:mt-8 flex flex-col items-center lg:items-start w-full max-w-lg">
               <a
-                href="#oferta"
+                href="https://pay.hotmart.com/H103943890J?off=pt1g1tq0&checkoutMode=10"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full py-3.5 px-4 sm:py-5 sm:px-7 lg:py-4.5 lg:px-6 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:via-rose-600 hover:to-pink-700 text-white font-black text-[15px] sm:text-xl md:text-2xl lg:text-xl xl:text-[1.35rem] uppercase tracking-wider shadow-xl shadow-pink-600/40 animate-pink-pulse hover:shadow-pink-600/70 transition-all duration-300 transform active:scale-95 cursor-pointer flex items-center justify-center gap-2.5 sm:gap-3"
               >
-                <span>QUERO GARANTIR MEU COMBO VITALÍCIO</span>
+                <span className="text-center">QUERO GARANTIR MEU COMBO VITALÍCIO</span>
               </a>
               
               <p className="mt-2 text-[11px] sm:text-sm text-zinc-400 text-center lg:text-left">
