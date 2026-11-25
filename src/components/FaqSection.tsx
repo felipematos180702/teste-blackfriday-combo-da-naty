@@ -94,3 +94,4 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenCheckout }) => {
     </section>
   );
 };
+
