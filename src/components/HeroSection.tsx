@@ -96,8 +96,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             </div>
 
             {/* Micro Trust Badges Centralizados no Mobile */}
-            <div className="mt-4 sm:mt-7 lg:mt-8 pt-4 sm:pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-6 text-zinc-300 text-xs sm:text-lg lg:text-base text-center lg:text-left">
-              <span>Clique no vídeo abaixo e saiba tudo sobre essa <strong className="text-pink-400 font-bold">oferta exclusiva da black</strong></span>
+            <div className="mt-4 sm:mt-7 lg:mt-8 pt-4 sm:pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-6 text-zinc-300 text-[15px] leading-snug sm:text-lg lg:text-base text-center lg:text-left">
+              <span className="text-[15px] sm:text-lg lg:text-base">Clique no vídeo abaixo e saiba tudo sobre essa <strong className="text-pink-400 font-bold">oferta exclusiva da black</strong></span>
             </div>
 
           </div>
