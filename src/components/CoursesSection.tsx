@@ -8,7 +8,7 @@ interface CoursesSectionProps {
 
 export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }) => {
   return (
-    <section id="cursos" className="py-20 md:py-28 relative bg-[#09090b] border-t border-zinc-900">
+    <section id="cursos" className="py-10 md:py-28 relative bg-[#09090b] border-t border-zinc-900">
       {/* Background accents */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-pink-600/10 blur-[130px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-0 w-96 h-96 bg-rose-600/10 blur-[130px] pointer-events-none rounded-full" />
@@ -16,7 +16,7 @@ export const CoursesSection: React.FC<CoursesSectionProps> = ({ onOpenCheckout }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs font-bold uppercase tracking-widest mb-4">
             <span>2 Cursos Completos • 1 Único Investimento</span>
           </div>

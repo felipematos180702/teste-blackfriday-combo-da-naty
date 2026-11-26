@@ -17,7 +17,7 @@ const COMPARISON_ITEMS = [
 
 export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenCheckout }) => {
   return (
-    <section id="comparativo" className="py-20 md:py-28 relative bg-[#09090b] border-t border-zinc-900">
+    <section id="comparativo" className="py-10 md:py-28 relative bg-[#09090b] border-t border-zinc-900">
       
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-pink-600/10 blur-[160px] pointer-events-none rounded-full" />
@@ -25,7 +25,7 @@ export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenChec
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Header no Estilo Exato da Imagem */}
-        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-7 sm:mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.4rem] font-black tracking-tight font-dream-orphans leading-[1.05] uppercase [text-wrap:balance]">
             <span className="text-white block">VOCÊ PAGA MENOS.</span>
             <span className="text-pink-500 block mt-1.5">E LEVA MUITO MAIS.</span>

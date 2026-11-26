@@ -6,8 +6,8 @@ export const Footer: React.FC = () => {
   const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   return (
-    <footer className="bg-black border-t border-zinc-900 text-zinc-400 text-xs py-14 pb-20 md:pb-14">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <footer className="bg-black border-t border-zinc-900 text-zinc-400 text-xs py-10 md:py-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 md:space-y-10">
         
         {/* Main Footer Row */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-zinc-800">

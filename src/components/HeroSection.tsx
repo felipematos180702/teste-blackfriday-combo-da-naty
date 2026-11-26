@@ -71,7 +71,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             {/* Headline Centralizada no Mobile (33.2px) / Lateralizada à Esquerda no Desktop */}
             <h1 className="text-[33.2px] sm:text-5xl md:text-6xl lg:text-[3.8rem] xl:text-[4.35rem] 2xl:text-[4.7rem] font-black text-white tracking-tight sm:tracking-wide leading-[1.04] font-dream-orphans [text-wrap:balance] text-center lg:text-left px-0">
               <span className="block">Black da Naty com</span>
-              <span className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent block">oferta especial</span>
+              <span className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent block">acesso vitalício</span>
             </h1>
 
             {/* Subheadline Centralizada no Mobile / Lateralizada à Esquerda no Desktop */}
@@ -96,15 +96,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             </div>
 
             {/* Micro Trust Badges Centralizados no Mobile */}
-            <div className="mt-4 sm:mt-7 lg:mt-8 pt-4 sm:pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-6 text-zinc-300 text-xs sm:text-lg lg:text-base">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-pink-400 shrink-0" />
-                <span>7 dias de garantia total</span>
-              </div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" />
-                <span>Certificado incluso</span>
-              </div>
+            <div className="mt-4 sm:mt-7 lg:mt-8 pt-4 sm:pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-6 text-zinc-300 text-xs sm:text-lg lg:text-base text-center lg:text-left">
+              <span>Clique no vídeo abaixo e saiba tudo sobre essa <strong className="text-pink-400 font-bold">oferta exclusiva da black</strong></span>
             </div>
 
           </div>
@@ -113,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
       </div>
 
       {/* 2. PARTE INFERIOR: CRONÔMETRO E VSL CENTRALIZADOS ABAIXO DO HERO */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 md:pb-24 flex flex-col items-center text-center border-t border-zinc-900/60">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-10 md:pt-8 md:pb-24 flex flex-col items-center text-center border-t border-zinc-900/60">
         
         {/* Informação de Duração da Oferta (72h) - Reduzida no mobile e em Amarelo */}
         <div className="mb-6 sm:mb-10 flex flex-col items-center justify-center w-full">

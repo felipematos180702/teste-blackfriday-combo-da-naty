@@ -210,6 +210,10 @@ export const FAQ_ITEMS = [
     answer: "Significa que você não precisará pagar nenhuma mensalidade ou renovação anual. Uma vez inscrita nesta Black Friday, os cursos Bolos do Zero e Doces de Vitrine serão seus para sempre."
   },
   {
+    question: "Os cursos de bônus também terão acesso vitalício?",
+    answer: "Não, a oferta com acesso vitalício é válida para os cursos Bolos do zero e Doces de vitrine, os cursos de bônus terão acesso normal de 6 ou 12 meses, e o curso de fotos tem o acesso padrão de 2 anos."
+  },
+  {
     question: "Eu nunca fiz bolos antes, os cursos servem para iniciantes?",
     answer: "Sim! O método Bolos do Zero foi criado especificamente para quem está começando do absoluto zero ou para quem já tenta fazer bolos mas ainda erra massa, ponto de recheio ou montagem. As aulas são práticas, passo a passo e sem segredos guardados."
   },
@@ -227,6 +231,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Quais são as formas de pagamento disponíveis?",
-    answer: "Você pode parcelar em até 12x de R$ 109,18 no cartão de crédito (ou múltiplos cartões), pagar à vista no PIX com liberação instantânea por R$ 996,14, ou através de boleto bancário."
+    answer: "Você pode parcelar em até 12x de R$ 109,18 no cartão de crédito (ou múltiplos cartões) ou pagar à vista no PIX com liberação instantânea por R$ 996,14."
   }
 ];

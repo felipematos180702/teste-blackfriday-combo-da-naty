@@ -8,14 +8,14 @@ interface ComboOfferSectionProps {
 
 export const ComboOfferSection: React.FC<ComboOfferSectionProps> = ({ onOpenCheckout }) => {
   return (
-    <section id="oferta" className="py-20 md:py-28 relative bg-black border-t border-zinc-900">
+    <section id="oferta" className="py-10 md:py-28 relative bg-black border-t border-zinc-900">
       {/* Background glow effects */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-pink-600/20 blur-[160px] pointer-events-none rounded-full" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Section Pre-title */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
           <div className="inline-flex items-center justify-center gap-1.5 p-0 bg-transparent border-none shadow-none text-pink-400 text-xs sm:text-sm font-bold uppercase tracking-wider mb-3 animate-pulse whitespace-nowrap">
             <span>Condição Exclusiva de Black Friday</span>
             <Flame className="w-4 h-4 text-pink-500 fill-pink-500 shrink-0" />

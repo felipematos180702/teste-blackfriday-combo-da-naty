@@ -65,11 +65,11 @@ export const TestimonialsMarquee: React.FC = () => {
   const [selectedPrint, setSelectedPrint] = useState<string | null>(null);
 
   return (
-    <section id="depoimentos" className="py-20 md:py-28 relative bg-[#09090b] overflow-hidden border-t border-zinc-900">
+    <section id="depoimentos" className="py-10 md:py-28 relative bg-[#09090b] overflow-hidden border-t border-zinc-900">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-pink-600/10 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative mb-6 md:mb-12">
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs font-bold uppercase tracking-widest mb-3">
             <MessageCircle className="w-3.5 h-3.5" />

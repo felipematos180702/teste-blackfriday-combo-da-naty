@@ -21,7 +21,7 @@ export const AboutFounderSection: React.FC<AboutFounderSectionProps> = ({ onOpen
   };
 
   return (
-    <section id="sobre" className="py-20 md:py-28 relative bg-[#09090b] border-t border-zinc-900">
+    <section id="sobre" className="py-10 md:py-28 relative bg-[#09090b] border-t border-zinc-900">
       
       {/* Background glow */}
       <div className="absolute top-1/2 left-10 w-96 h-96 bg-pink-600/10 blur-[140px] pointer-events-none rounded-full" />
@@ -81,7 +81,7 @@ export const AboutFounderSection: React.FC<AboutFounderSectionProps> = ({ onOpen
         </div>
 
         {/* 4 Cards de Métricas no rodapé da bio */}
-        <div className="mt-16 pt-12 border-t border-zinc-800/80">
+        <div className="mt-10 pt-8 md:mt-16 md:pt-12 border-t border-zinc-800/80">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {FOUNDER_INFO.metrics.map((metric, idx) => (
               <div

@@ -14,7 +14,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenCheckout }) => {
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 relative bg-black border-t border-zinc-900">
+    <section id="faq" className="py-10 md:py-28 relative bg-black border-t border-zinc-900">
       
       {/* Background glow */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-pink-600/10 blur-[140px] pointer-events-none rounded-full" />
@@ -22,7 +22,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenCheckout }) => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs font-bold uppercase tracking-widest mb-3">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Tire Suas Dúvidas</span>
