@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, ShieldCheck, CheckCircle2, Flame, Clock } from 'lucide-react';
 import nataschaHeroImg from '../assets/images/natascha_hero.jpg';
-import vslThumbnail from '../assets/images/hero_vsl_thumbnail_1793889840681.jpg';
+import vslCoverWebp from '../assets/images/vsl_cover.webp';
 
 interface HeroSectionProps {
   onOpenCheckout: () => void;
@@ -220,13 +220,13 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
               }`}
             >
               <img
-                src={vslThumbnail}
+                src="/assets/aistudio/Foto_de_capa_adcf92c1.webp"
                 alt="Apresentação do Combo Vitalício Doces da Naty"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/images/hero_vsl_thumbnail_1793889840681.jpg';
+                  (e.currentTarget as HTMLImageElement).src = vslCoverWebp;
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/40" />

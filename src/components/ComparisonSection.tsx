@@ -12,7 +12,7 @@ const COMPARISON_ITEMS = [
   { title: 'Bônus: Curso Slices Cakes', nessaBlack: true, depois: false },
   { title: 'Bônus: Curso de Fotos (para inscritas no dia 30/11)', nessaBlack: true, depois: false },
   { title: 'Super Bônus: Mentoria Individual 6 Meses (1ª aluna)', nessaBlack: true, depois: false },
-  { title: 'Acesso Vitalício sem renovação anual', nessaBlack: true, depois: false },
+  { title: 'Acesso Vitalício sem renovação anual', nessaBlack: true, depois: true },
 ];
 
 export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenCheckout }) => {

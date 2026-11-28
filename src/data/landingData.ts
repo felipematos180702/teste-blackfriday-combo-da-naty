@@ -67,27 +67,27 @@ export const COURSE_BOLOS_DO_ZERO = {
 export const COMBO_DELIVERABLES = [
   {
     title: "Curso Completo Doces de Vitrine",
-    desc: "Acesso total a todas as aulas de produção, vendas, delivery e gestão.",
+    desc: "Acesso a estrutura para organizar sua confeitaria, aprenda sobre vendas, delivery, precificação, gestão financeira, atendimento ao cliente e as receitas dos doces de sucesso.",
     value: "R$ 997,00"
   },
   {
     title: "Curso Completo Bolos do Zero",
-    desc: "O método passo a passo do bolo perfeito às vendas em fatias.",
+    desc: "O método com o passo a passo para fazer bolos festivos estruturados, bonitos e bem decorados.",
     value: "R$ 1.197,00"
   },
   {
     title: "BÔNUS 1: Curso de Bolo no Pote",
-    desc: "Aprenda a faturar com os bolos no pote mais vendidos e desejados do mercado.",
+    desc: "Aprenda a faturar com os bolos no pote de sucesso da Doces da Naty, venda todos os dias na sua vitrine ou delivery.",
     value: "R$ 597,00"
   },
   {
     title: "BÔNUS 2: Curso Slices Cakes",
-    desc: "Técnicas e montagens de fatias gourmet irresistíveis e lucrativas.",
+    desc: "Aprenda toda a técnica para fazer fatias perfeitas que vendem todos os dias.",
     value: "R$ 349,00"
   },
   {
     title: "BÔNUS 3: Curso de Fotos e Vídeos com a Naty (Inscrições no dia 30/11)",
-    desc: "Aprenda a criar conteúdos e fotos profissionais com o celular que vendem doces no ato.",
+    desc: "Aprenda do zero como criar conteúdos que geram desejo, fotos, vídeos, cenários e edições, tudo isso usando o celular.",
     value: "R$ 397,00"
   },
   {
