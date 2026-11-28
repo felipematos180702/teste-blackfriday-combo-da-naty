@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Play, ShieldCheck, CheckCircle2, Flame, Clock } from 'lucide-react';
 import nataschaHeroImg from '../assets/images/natascha_hero.jpg';
 import vslThumbnail from '../assets/images/hero_vsl_thumbnail_1793889840681.jpg';
@@ -7,8 +7,85 @@ interface HeroSectionProps {
   onOpenCheckout: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
+export const HeroSection: React.FC<HeroSectionProps> = () => {
+  const [hasStarted, setHasStarted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+
+  const sendVimeoCommand = (method: string, value?: unknown) => {
+    if (!iframeRef.current?.contentWindow) return;
+    const message = value !== undefined ? { method, value } : { method };
+    iframeRef.current.contentWindow.postMessage(JSON.stringify(message), '*');
+  };
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    const fallbackTimer = window.setTimeout(() => {
+      setIsVideoVisible(true);
+    }, 1500);
+
+    const handleMessage = (event: MessageEvent) => {
+      if (!event.origin.includes('vimeo.com')) return;
+      try {
+        const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+        if (!data) return;
+
+        if (data.event === 'ready') {
+          sendVimeoCommand('addEventListener', 'play');
+          sendVimeoCommand('addEventListener', 'pause');
+          sendVimeoCommand('addEventListener', 'timeupdate');
+          sendVimeoCommand('addEventListener', 'ended');
+          sendVimeoCommand('setVolume', 1);
+          sendVimeoCommand('play');
+        } else if (data.event === 'play') {
+          setIsPlaying(true);
+        } else if (data.event === 'timeupdate') {
+          if (data.data?.seconds > 0.3) {
+            setIsVideoVisible(true);
+          }
+          if (data.data?.percent !== undefined) {
+            const p = Number(data.data.percent);
+            const smartPercent = Math.min(100, Math.pow(p, 0.65) * 100);
+            setProgress(smartPercent);
+          }
+        } else if (data.event === 'pause') {
+          setIsPlaying(false);
+        } else if (data.event === 'ended') {
+          setIsPlaying(false);
+          setIsVideoVisible(false);
+          setProgress(0);
+        }
+      } catch {
+        // Ignore non-JSON messages
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => {
+      window.clearTimeout(fallbackTimer);
+      window.removeEventListener('message', handleMessage);
+    };
+  }, [hasStarted]);
+
+  const handleStartOrToggle = () => {
+    if (!hasStarted) {
+      setHasStarted(true);
+      setIsPlaying(true);
+      return;
+    }
+
+    if (isPlaying) {
+      sendVimeoCommand('pause');
+      setIsPlaying(false);
+    } else {
+      sendVimeoCommand('setVolume', 1);
+      sendVimeoCommand('play');
+      setIsPlaying(true);
+    }
+  };
 
   return (
     <section className="relative overflow-hidden bg-[#09090b]">
@@ -116,56 +193,68 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
           </div>
         </div>
 
-        {/* Espaço/Placeholder estilizado para VSL (Vídeo de Vendas) Centralizado */}
+        {/* VSL Limpo (Sem botões de curtir, compartilhar, título ou barra nativa do Vimeo) */}
         <div className="w-full max-w-4xl mx-auto relative group mb-8">
-          <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-zinc-950 border border-pink-500/40 shadow-2xl shadow-pink-950/40">
-            
-            {/* VSL Media Image / Video Simulation */}
-            <img
-              src={vslThumbnail}
-              alt="Apresentação do Combo Vitalício Doces da Naty"
-              className={`w-full h-full object-cover transition-transform duration-700 ${isPlaying ? 'scale-105 filter brightness-90' : 'group-hover:scale-105'}`}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/images/hero_vsl_thumbnail_1793889840681.jpg';
-              }}
-            />
+          <div
+            onClick={handleStartOrToggle}
+            className="relative aspect-video w-full rounded-2xl overflow-hidden bg-zinc-950 border border-pink-500/40 shadow-2xl shadow-pink-950/40 cursor-pointer select-none"
+          >
+            {/* Iframe do Vimeo sem interação direta de mouse (impede aparição de Curtir/Compartilhar/Barra do Vimeo) */}
+            {hasStarted && (
+              <iframe
+                ref={iframeRef}
+                src="https://player.vimeo.com/video/1250821860?autoplay=1&controls=0&title=0&byline=0&portrait=0&badge=0&sidedock=0&dnt=1&autopause=0&api=1"
+                title="VSL Black da Naty"
+                className="absolute inset-0 w-full h-full border-0 pointer-events-none select-none"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            )}
 
-            {/* Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40 pointer-events-none" />
+            {/* Capa protetora: fica visível antes do Play, durante o carregamento inicial e quando pausado */}
+            <div
+              className={`absolute inset-0 z-20 transition-opacity duration-300 ${
+                hasStarted && isPlaying && isVideoVisible
+                  ? 'opacity-0 pointer-events-none'
+                  : 'opacity-100'
+              }`}
+            >
+              <img
+                src={vslThumbnail}
+                alt="Apresentação do Combo Vitalício Doces da Naty"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/images/hero_vsl_thumbnail_1793889840681.jpg';
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/40" />
 
-            {/* Video header info (oculto no mobile) */}
-            <div className="hidden sm:flex absolute top-4 left-4 right-4 items-center justify-between text-xs font-semibold z-10 pointer-events-none">
-              <div className="flex items-center gap-2 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-lg border border-pink-500/30 text-white text-xs">
-                <span className="w-2 h-2 rounded-full bg-pink-500 animate-ping" />
-                <span>Vídeo Oficial da Oferta</span>
-              </div>
-              <div className="flex items-center gap-1.5 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-lg border border-zinc-700/60 text-zinc-300 text-xs">
-                <Clock className="w-3.5 h-3.5 text-pink-400" />
-                <span>Duração: 8:42</span>
-              </div>
-            </div>
-
-            {/* Interactive Play Button or Active Playing State */}
-            {!isPlaying ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-4 z-20">
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
                 <button
-                  onClick={() => setIsPlaying(true)}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleStartOrToggle();
+                  }}
                   className="group/btn relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-tr from-pink-600 to-rose-500 text-white shadow-2xl shadow-pink-500/50 hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
-                  aria-label="Assistir ao vídeo de vendas"
+                  aria-label={isPlaying ? 'Pausar vídeo' : 'Assistir ao vídeo'}
                 >
                   <div className="absolute inset-0 rounded-full bg-pink-500 animate-ping opacity-40" />
                   <Play className="w-9 h-9 sm:w-11 sm:h-11 translate-x-1 fill-white" />
                 </button>
-                <div className="mt-4 px-4 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-pink-500/30 text-white text-xs sm:text-sm font-semibold tracking-wide">
-                  Clique para assistir
-                </div>
               </div>
-            ) : (
-              <div
-                onClick={() => setIsPlaying(false)}
-                className="absolute inset-0 z-20 cursor-pointer"
-                title="Clique para pausar"
-              />
+            </div>
+
+            {/* Barra de progresso limpa estilo VSL na base (sem controles do Vimeo) */}
+            {hasStarted && isVideoVisible && (
+              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-zinc-900/80 z-30 pointer-events-none">
+                <div
+                  className="h-full bg-gradient-to-r from-pink-500 to-rose-500 transition-all duration-300"
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
             )}
           </div>
         </div>
