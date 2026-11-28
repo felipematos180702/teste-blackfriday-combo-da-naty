@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cursodocesdanaty.com.br/comboblack/sitemap.xml

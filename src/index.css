@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Dream Orphans";
-  src: url("/fonts/dream-orphans.woff") format("woff"),
+  src: url("./assets/fonts/dream-orphans.woff") format("woff"),
+       url("/fonts/dream-orphans.woff") format("woff"),
        url("https://fonts.cdnfonts.com/s/8646/dream%20orphans.woff") format("woff");
   font-weight: 100 500;
   font-style: normal;
@@ -13,7 +14,8 @@
 
 @font-face {
   font-family: "Dream Orphans";
-  src: url("/fonts/dream-orphans-bold.woff") format("woff"),
+  src: url("./assets/fonts/dream-orphans-bold.woff") format("woff"),
+       url("/fonts/dream-orphans-bold.woff") format("woff"),
        url("https://fonts.cdnfonts.com/s/8646/dream%20orphans%20bd.woff") format("woff");
   font-weight: 600 900;
   font-style: normal;

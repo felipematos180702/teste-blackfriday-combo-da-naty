@@ -96,7 +96,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
         {/* Versão Mobile / Tablet: Foto da produtora no topo da seção com maior destaque e camada overlay na base */}
         <div className="hero-mobile-layer lg:hidden relative z-20 w-full h-[460px] sm:h-[640px] md:h-[740px] overflow-hidden bg-zinc-950">
           <img
-            src="/assets/aistudio/imagem_naty_black_b98c8f4a.JPG"
+            src="./assets/aistudio/imagem_naty_black_b98c8f4a.JPG"
             alt="Natascha - Doces da Naty"
             loading="eager"
             decoding="sync"
@@ -113,7 +113,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
         {/* Versão Desktop: Background Image no lado direito encostada na lateral direita */}
         <div className="hero-desktop-layer hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[720px] xl:w-[840px] 2xl:w-[940px] pointer-events-none z-0 items-end justify-end overflow-hidden">
           <img
-            src="/assets/aistudio/imagem_naty_black_b98c8f4a.JPG"
+            src="./assets/aistudio/imagem_naty_black_b98c8f4a.JPG"
             alt="Natascha - Doces da Naty"
             className="h-full w-full max-h-full object-contain object-[right_bottom] opacity-95 scale-[1.32] xl:scale-[1.35] origin-bottom-right translate-y-12 xl:translate-y-25 transition-all duration-700 [mask-image:linear-gradient(to_right,transparent_0%,transparent_12%,black_38%,black_100%)] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,transparent_12%,black_38%,black_100%)]"
             onError={(e) => {
@@ -172,11 +172,6 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
               </p>
             </div>
 
-            {/* Micro Trust Badges Centralizados no Mobile */}
-            <div className="mt-4 sm:mt-7 lg:mt-8 pt-4 sm:pt-5 border-t border-zinc-800/80 w-full max-w-2xl flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-6 text-zinc-300 text-[15px] leading-snug sm:text-lg lg:text-base text-center lg:text-left">
-              <span className="text-[15px] sm:text-lg lg:text-base">Clique no vídeo abaixo e saiba tudo sobre essa <strong className="text-pink-400 font-bold">oferta exclusiva da black</strong></span>
-            </div>
-
           </div>
         </div>
 
@@ -185,6 +180,13 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
       {/* 2. PARTE INFERIOR: CRONÔMETRO E VSL CENTRALIZADOS ABAIXO DO HERO */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 pb-10 md:pt-8 md:pb-24 flex flex-col items-center text-center border-t border-zinc-900/60">
         
+        {/* Chamada para o vídeo acima da frase em amarelo */}
+        <div className="mb-4 sm:mb-6 w-full max-w-3xl mx-auto flex items-center justify-center text-zinc-200 leading-snug text-center [text-wrap:balance]">
+          <span className="text-lg sm:text-xl md:text-2xl font-medium">
+            Clique no vídeo abaixo e saiba tudo sobre essa <strong className="text-pink-400 font-bold">oferta exclusiva da black</strong>
+          </span>
+        </div>
+
         {/* Informação de Duração da Oferta (72h) - Reduzida no mobile e em Amarelo */}
         <div className="mb-6 sm:mb-10 flex flex-col items-center justify-center w-full">
           <div className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 px-3.5 py-1.5 sm:px-6 sm:py-3 rounded-xl sm:rounded-2xl bg-amber-500/10 border border-amber-500/40 text-amber-300 font-bold text-[11px] sm:text-base md:text-lg shadow-lg shadow-amber-950/20 text-center [text-wrap:balance]">
@@ -220,7 +222,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
               }`}
             >
               <img
-                src="/assets/aistudio/Foto_de_capa_adcf92c1.webp"
+                src="./assets/aistudio/Foto_de_capa_adcf92c1.webp"
                 alt="Apresentação do Combo Vitalício Doces da Naty"
                 loading="lazy"
                 decoding="async"

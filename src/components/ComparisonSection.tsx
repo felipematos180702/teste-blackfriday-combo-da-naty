@@ -118,8 +118,9 @@ export const ComparisonSection: React.FC<ComparisonSectionProps> = ({ onOpenChec
               <span>QUERO GARANTIR NESSA BLACK</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </a>
-            <p className="mt-2.5 text-xs text-zinc-400">
-              Acesso vitalício a todos os cursos e bônus • Economia de R$ 2.540,86 • Garantia de 7 dias
+            <p className="mt-2.5 text-xs text-zinc-400 leading-relaxed">
+              <span className="block">Acesso vitalício a todos os cursos e bônus</span>
+              <span className="block">Economia de R$ 2.540,86 • Garantia de 7 dias</span>
             </p>
           </div>
 
